@@ -1,0 +1,508 @@
+:::::::: Min and Max Logic in array  .................
+
+1. first 
+
+let data=[1 , 2 , 3 , 4]
+
+let min=data[0]
+
+for(let i=0; i<data.length; i++){
+    if(data[i] < min){
+        min=data[i]
+    }
+}
+console.log(min)
+
+let max=data[0]
+for(let i=0; i<data.length; i++){
+   if(data[i] > max){
+       max=data[i]
+   }
+}
+console.log(max)
+
+
+2.second 
+let min=[40 , 20]
+
+console.log(Math.min(...min))
+
+let max =[40 , 60]
+
+console.log(Math.max(...max))
+
+3.third
+const a = 10;
+const b = 20;
+const c = 5;
+
+const min = Math.min(a, b, c); // Minimum value
+const max = Math.max(a, b, c); // Maximum value
+
+console.log(`Minimum: ${min}`); // Output: Minimum: 5
+console.log(`Maximum: ${max}`); // Output: Maximum: 20
+
+
+
+::::: Merge with ..................................
+
+1.first
+let data1=[1 , 2  , 2 , 3]
+let data2=[7 , 8 , 9 , 10]
+let data3=[]
+for(let i=0; i<data1.length; i++){
+    data3[i]=data1[i]
+}
+console.log(data3)
+for(let i=0; i<data2.length; i++){
+    data3[data1.length+i]=data2[i]
+}
+console.log(data3)
+
+2. second
+
+let data1=[1, 2 , 3]
+let data2=[4 , 5 , 6]
+let data3=[...data1 , ...data2]
+console.log(data3)
+
+3.third 
+let data4=data1.concat(data2)
+console.log(data4)
+
+
+
+
+:::::::::::::::::::Sum of array elemnt ||||||||||||||||||||||||||||| 
+
+1. first 
+let one=[10 , 20 , 30 , -10]
+let two=one.reduce((alm , elem)=>{
+    return alm + elem
+},2)
+console.log(two)
+
+
+
+2 . second 
+
+2::function maxSubArray(nums) {
+  let sum = 0;
+  let max = nums[0];
+
+  for (let i = 0; i < nums.length; i++) {
+    sum += nums[i];
+    if (sum > max) {
+      max = sum;
+    }
+    if (sum < 0) {
+      sum = 0;
+    }
+  }
+  return max;
+}
+// Time Complexity - O(n)
+// Space Complexity - O(1)
+console.log(maxSubArray([5, 4, -1, 7, 8]));
+
+
+3 .third  
+
+let data = [10, 20, 30, 40, 50];
+let sum = 0;
+
+for (let i = 0; i < data.length; i++) {
+    sum += data[i];
+}
+
+console.log("Sum of array:", sum); // Output: 150
+
+
+
+::::::::::::::::::::::::: :::::: ----------------------------------------------
+
+///Full str count Lenght
+let str="jugal"
+let obj={}
+ for(let i=0; i<str.length; i++){
+    if(obj[str]){
+    obj[str]++
+    }else{
+        obj[str]=1
+    }
+}
+console.log(obj)
+
+
+let data="name"
+let count={}
+count[data]="karan"
+console.log(count)
+
+
+
+
+///////////////////////////  ........deleting .........
+
+// // console.log(  checkAnnar("hello" , "olle"))
+let data=[10 , 20 , 30 , 540]
+
+let del=0;
+
+for(let i=0; i<data.length; i++){
+
+    data[i]=data[i+1]
+
+}
+data.length=data.length-1;
+console.log(data)
+
+
+
+
+1::Array Insert  ...................................
+:::::::::::::::::::::::
+et data=[ 9 , 8 , 7 , 6 , 5 , 4 , 3 , 2 , 1,0,100 ]
+console.log(data.length)
+let add=69;
+
+let post=0;
+
+for(let i=data.length-1; i>=0; i--){
+
+    if(i>=post){
+        
+        data[i+1]=data[i]
+    }if(i==post){
+
+        data[i]=add;
+    }
+
+}
+
+console.log(data)
+
+
+var myArray = ["Element 1", "Element 2", "Element 3"];
+var elementsToInsert = ["New Element 1", "New Element 2"];
+var insertionIndexes = [1, 3];
+for (var i = 0; i < elementsToInsert.length; i++) {
+  var index = insertionIndexes[i];
+  myArray.splice(index, 0, elementsToInsert[i]);
+}
+console.log(myArray);
+
+let data=[2 ,  3 , 4 , 5]
+data.splice(0 , 0 , 1)
+console.log(data)
+
+ 
+ ::::::::::::::::::::::::Anagram ...........
+
+
+function  checkAnnar(str1 , str2){
+    let objectstr={};
+if(str1.length !== str2.length){
+    return false;
+}
+for(ch of str1){
+    // console.log(ch)
+    objectstr[ch]=(objectstr[ch] || 0) + 1;
+}
+// console.log(objectstr)
+for(ch of str2){
+    // console.log(objectstr[ch])
+    if(!objectstr[ch]){
+        return false  
+    }
+objectstr[ch]--
+}
+return true
+// console.log(objectstr)
+}
+// console.log(  checkAnnar("hello" , "olle"))
+
+console.log(  checkAnnar([1 , 2 , 3], [3 , 2 , 1,0]))
+
+1:::
+function checkAnagram(input1, input2) {
+    const sortedInput1 = [...input1].sort().join('');
+    const sortedInput2 = [...input2].sort().join('');
+
+    return sortedInput1 === sortedInput2;
+}
+
+console.log(checkAnagram("hello", "olle"));        // true
+console.log(checkAnagram([1, 2, 3], [3, 2, 1]));  // true
+console.log(checkAnagram("hello", "world"));      // false
+console.log(checkAnagram([1, 2, 3], [3, 2, 2]));  // false
+
+
+
+function isAnagram(s, t) {
+  if (s.length !== t.length) return false;
+  
+  return s.split('').sort().join('') === t.split('').sort().join('');
+}
+
+console.log(isAnagram("listen", "silent")); // true
+console.log(isAnagram("hello", "world"));   // false
+
+
+
+Fisher-Yates Shuffer Algo
+/////////////////////////////
+
+function fisherYatesShuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  }
+  const myArray = [1, 2, 3, 4, 5];
+  const shuffledArray = fisherYatesShuffle(myArray);
+  console.log(shuffledArray); // Output: [5, 2, 4, 1, 3] (random order)
+
+
+2 .second
+
+  function shuffleArray(array) { //////
+        return array.sort(() => Math.random() - 0.5);
+    }
+    
+    const colors = shuffleArray(['red', 'blue', 'green', 'yellow', 'orange', 'purple']);
+    console.log(colors);
+
+
+
+
+
+Palindrome string  .......................................
+///////////////////////////
+function pali(data){
+let start=0;
+let end=data.length -1;
+let result=true;
+while(end>start){
+    if(data[start] !=data[end]){
+        result=false;
+    }
+    start++;
+    end--;
+}
+return result;
+}
+let str="hello"
+console.log(pali(str))
+
+
+const reversedStr = str.split('').reverse().join('');
+console.log("Reversed:", reversedStr);
+const isPalindrome = str === reversedStr;
+console.log(isPalindrome ? "Palindrome" : "Not a palindrome");
+
+
+let data="level"
+console.log(data , "not reverse")
+let pal=data.split("").reverse().join("")  
+console.log(data  == pal ? 'reverse' : 'reverse not')
+//console.log(data.split("").reverse().join("").split("").sort().join("")  , "reverse and sort")
+
+
+
+
+///////////Resvers array //////////////////////!SECTION
+      let data = [10, 20, 30, 40, 50];
+let start = 0;
+let end = data.length - 1;
+
+while (start < end) {
+  let temp = data[start];
+  data[start] = data[end];
+  data[end] = temp;
+  start++;
+  end--;
+}
+
+console.log(data);
+
+
+// Time Complexity -> O(n)
+// Space Complexity -> O(1)
+
+1:::let data=[10 , 20 , 30 , 40 , 50 , 60]
+let temp;
+function coumters(data,start , end){
+    if(start <=end){
+        temp=data[start]
+        data[start]=data[end]
+        data[end]=temp;
+    
+        coumters(data , start+1  , end -1)
+    }
+    console.log(data)
+}
+coumters(data, 0 , data.length -1)
+
+// let start = 10;
+// let end = 20;
+// [start, end] = [end, start];
+// console.log(start, end); // Output: 20 10
+
+
+let data = [10, 20, 30, 40];  // new methods 
+let start = 0;
+let end = data.length - 1;
+
+while (start < end) {
+    [data[start], data[end]] = [data[end], data[start]];
+    start++;
+    end--;
+}
+
+console.log(data); // Output: [40, 30, 20, 10]
+
+
+
+// let one=10
+// let two=20
+// let temp=one // temp =10
+// one=two   // one = 20
+// two=temp // two= 10
+// console.log("One:", one, "Two:", two)
+
+
+
+
+
+
+
+2:::: Array Swap ::::::::::::: .....................
+// let arra1 = [10, 20];
+// let arra2 = [30, 40];
+  // Swap the arrays using a loop
+    for (let i = 0; i < array1.length; i++) {
+      let temp = array1[i];
+      array1[i] = array2[i];
+      array2[i] = temp;
+    }
+    
+    // Print the swapped arrays
+    console.log("Swapped Array 1: " + array1);
+    console.log("Swapped Array 2: " + array2);
+  }
+
+::::::::: New Methods ..............
+let array1 = [10, 20];
+let array2 = [30, 40];
+
+for (let i = 0; i < array1.length; i++) {
+    // Use destructuring to swap the elements
+    [array1[i], array2[i]] = [array2[i], array1[i]];
+}
+
+// Print the swapped arrays
+console.log("Swapped Array 1: " + array1); // Output: [30, 40]
+console.log("Swapped Array 2: " + array2); // Output: [10, 20]
+
+
+
+
+
+
+1:::Sum of natural number:::::::::::::::::::::::::::::
+function sumofnatural(num){
+    // let sum=0;
+    // for(let i=0; i<=num; i++){
+    //     sum=sum+i
+    // }
+    // return sum
+console.log(sumofnatural(5)) will output 15 (sum of natural numbers up to 5: 1 + 2 + 3 + 4 + 5 = 15).
+    return  num*(num+1)/2
+}
+console.log(sumofnatural(5))
+console.log(sumofnatural(10))
+console.log(sumofnatural(8))
+
+
+
+::::::::::::::sum of digits of a number ||||||||  //////////////////////////////////////////////////////////////////
+function sumofDigits(num){
+let sum=0;
+while(num > 0){
+    sum+=num%10;
+    num= Math.floor(num/10);
+}
+return sum
+}
+console.log(sumofDigits(1287))
+
+
+
+:::::::::count the number of digits of a number  //////////////////////////////////////////////////////////////////
+function ones(sum){
+   let count= sum.toString().length;
+   let num=3
+   if(count == num){
+    console.log(true)
+   console.log(count)
+   }else{
+    console.log(false)
+   }
+}
+ones(123)
+
+function Ones(sum){
+   let count = sum.toString().length;
+   console.log(count)
+   return count;
+}
+
+let sum = "jugal sharma";
+console.log(Ones(sum));
+
+
+
+::::::::::FindMissingNumber:::::::::::
+
+function findMissingNumber(num) {
+    let sum = 0;
+    for (let i = 0; i < num.length; i++) {
+        sum += num[i];
+    }
+    return num.length * (num.length + 1) / 2 - sum;
+}
+console.log(findMissingNumber([0,1,2,4])); // Output will be 3 (as 3 is the missing number in the array)
+
+
+
+:::::: Longest Common Prefix::::::::::::::::::::::::::::
+function longestCommonPrefix(word1, word2) {
+    let prefix = "";
+    const minLength = Math.min(word1.length, word2.length);
+
+    for (let i = 0; i < minLength; i++) {
+        if (word1[i] === word2[i]) {
+            prefix += word1[i]; // Add character to prefix if they match
+        } else {
+            break; // Break the loop if characters don't match
+        }
+    }
+    return prefix;
+}
+// Example usage:
+console.log(longestCommonPrefix('hello', 'world')); // Output will be an empty string as there's no common prefix
+console.log(longestCommonPrefix('cat', 'cattle')); // Output will be "cat" as "cat" is the common prefix
+
+
+
+:::::::::::::::::::
+
+|||||||||first ocd=curance in  string ::::::::::
+function firstOccurrence(str, subStr) {
+    return str.indexOf(subStr);
+}
+// Example usage:
+console.log(firstOccurrence("Hello, this is a sample text", "is")); // Output will be 10
+console.log(firstOccurrence("JavaScript is fun", "Java")); // Output will be -1 (as "Java" is not present in "JavaScript is fun")

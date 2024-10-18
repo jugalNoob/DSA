@@ -1,0 +1,275 @@
+
+
+
+
+-------- Linear Search ??))))))))))))
+let data=[10 , 20 , 30 , 40 , 50]
+let sea=20   // -->search 
+let poist=undefined
+for(let i=0; i<data.length; i++){   // -->loop 
+
+   // console.log(data[i]) 
+
+   if(data[i] == sea){ // --> 10 == 10  search with number 
+      poist=data[i]   //   -->   20 == data[20]  //swap with data[20]
+      break;  //  -->break; 
+   }
+}
+console.log(poist)
+
+
+
+|||||||| Delete Array ---------<>
+let data=[10 , 20 , 30 , 40]
+let del=0
+// for(let i=2; i<data.length; i++){  //i=2 loop  starting  point i=3
+//    console.log(data[i])
+// }
+
+for(let i=del; i<data.length-1; i++){  // without -1 show undefined or with -1 show duplicate value
+   data[i]=data[i+1]  // start poi
+   nt data[20]= data[30]
+}
+data.length=data.length-1
+console.log(data)
+
+let data=[10 , 20 , 30 , 40]
+
+let del=2
+for(let i=2; i<data.length; i++){
+   console.log(data[i])
+}
+
+for(let i=del; i<data.length; i++){
+data[i]=data[i+1]
+}
+console.log(data)
+
+
+|||||||||| MERge array -----------------
+let data=[1 , 2 , 3]
+let data2=[10 , 11 , 12]
+let data3=[]
+for(let i=0; i<data.length; i++){
+   // data3.push(data[i])
+   //data3[i]=data[i]  /// data3[]  == data[1]
+
+   data3.push(data[i])
+}
+
+// console.log(data3)
+
+
+for(let i=0; i<data2.length; i++){
+   // console.log(data3[i] , "i am three") 
+   console.log(i+data.length)
+   // data3.push(data2[i])
+  //  data3[data.length+i]=data2[i]
+}
+// console.log(data3)
+
+
+
+
+
+||||||||| Insert Value Array elements ::::::::::::::::::::::::::
+
+let data = [10, 20, 30, 40, 50, 1];
+let index=4
+let add='jugal sharma'
+ for(let i=data.length-1; i>=0; i--){ // loop start to ending point
+  console.log(data[i])
+   if(i>=index ){ // 6 > 4  , 5 > 4 , 4 > 4
+        data[i+1] = data[i] //  1 = 50
+   }
+   if(i == index){  // 4 == 4
+       data[i] = add; //  data['jugal']='jugal
+   }
+}
+// console.log(6 > 4)
+// console.log(5 > 4)
+// console.log(4 >= 4)
+// console.log(3 >= 4)
+console.log(data)
+  // if(data[i] < add){
+   //     index = i+1
+   //     break
+   // }
+
+   //  if(data[i] > poist){
+   //      poist = data[i]
+   //  }
+
+
+
+|||||||| Reserved array  loop --> ::::::::::::::::
+for(let i=5;  i>0; i--){ //5-1 == 4
+   console.log(i)
+}
+
+console.log(5>0 , '5 > 0')
+console.log(0>0  , '0>0')
+
+
+let data=[ 10 , 20 , 30 , 40 , 50 , 60]
+let start=0
+let end=data.length-1
+
+console.log(data)
+while(start < end){
+
+   console.warn(data)
+
+   let temp=data[start] // temp=10
+   // console.log(temp)
+   // console.log(data[start] , "i am start")
+   data[start]=data[end]  // data[60]=data[10]  // data[50] = data[20]  // data[30]=data[40]
+   
+   // console.log(data[end] , "i am after temp swap")
+      // data[60]=data[10]
+   // console.log(data[end] , " i am end")
+   // data[end]=data[start] // data[60]=data[6
+   data[end]=temp //data[10] =60
+   // data[60]=temp  // data[60]=10
+   // console.log(temp , "i am temp")
+   //data[10] =10
+   start ++
+   end --
+}
+console.log(data)
+
+
+let a=10
+let b=20
+console.log(a , b)
+
+
+let temp=a //let  temp=10
+a=b // let a =20
+b=temp // let b=10
+console.log(a , b)
+
+
+// let start = 10;
+// let end = 20;
+// [start, end] = [end, start];
+// console.log(start, end); // Output: 20 10
+
+let data= [ 10  , 20 , 30 , 40]
+// console.log(data.reverse())
+
+for(let i=data.length-1;  i>=0; i--){
+    console.log(data[i])
+}
+
+
+|||||||| Binary Search  -----------\/////   :::::::::::::::
+
+[52 , 10 , 20 ]  // 
+
+let data = [ 1 , 2  , 3 , 4 , 5 , 6 , 7 , 8  , 9];  // binary only work sort number
+let find = 9;
+let poist=undefined;
+let start = 0;
+let end = data.length - 1;
+while (start <= end) {   
+let mind=Math.floor((start + end)/2) // 3 
+// console.log(mind)
+// break;
+if(data[mind] == find){
+   poist=mind
+   break;
+}
+else if(data[mind]  < find){  
+data=mind+1
+}
+else{
+   data=mind-1
+}
+}
+// console.log(data)
+// console.log(poist)
+
+
+||||||||| string counting ------------------------>>
+
+/// simple  example  ..............
+let str="jugal"
+let obj=[]
+obj["name"]=str
+console.log(obj)
+
+
+let str="jjugal"
+let obj=[]
+
+for(let i=0; i<str.length; i++){
+   // console.log(str[i])
+   let str1=str[i]
+   // console.log(str1)
+   // if(obj[str1]){
+   //    obj[str1]++;
+   // }else{
+   //    obj[str1]=1;  // obj['j'] = 1
+   // }
+
+
+   obj[str1]=1  // obj['j]=1
+  
+
+}
+// obj[str1]=1  // obj['j]=1 //thired method only show number 1
+// obj[str1]=obj[str1]=1 //second method
+// obj[str1] = (obj[str1] || 0) + 1  // obj['j'] = (obj['j'] || 0) + 1   obj['j'] = 1  + 1   obj['j'] = 2   obj['j'] = 3   obj['j'] = 4   obj['j'] = 5  obj['j'] = 6  obj['j'] = 7
+
+// console.log(obj[str1])
+//obj.push(str1 )
+
+console.log(obj)
+
+
+
+:::::::::: Max and Mix Value ::::::::::::
+let data=[20 , 30 , 40 , 1 , 2]
+let one=data[0]
+// console.log(one)
+
+console.log(20 < 20)
+console.log(1 < 20)
+ for(let i=0; i<data.length; i++){
+   // console.log(data[i] == one)
+   if(data[i]  < one){ //data[20]  < 20  ,  data[30] < 20 , data[1] < 20
+      one=data[i];
+
+   }
+}
+
+console.log(one)
+
+
+:::::::::::: palindrome  ::::::::::::::::::::::
+function pal(data){
+
+   let start=0;
+   let end=data.length-1; // start 0 
+   let result=true;
+
+
+
+   while(start<end){  /// start = 0  end = 4 and start = 4  , end = 0  loop end
+       if(data[start]!=data[end]){  
+       
+          result=false
+          break
+       }
+       start++  // start 0 , start =1 ,  start =2 , start=3
+       end-- //end=
+   }
+   return result
+}
+
+
+let data="aba"  //aba //abca //abcba //hello
+
+console.log(pal(data))   // true  or  false  or  undefined  or  null  or  NaN  or  Infinity  or  -Infinity  or  '' or  " " or  undefined or  null or  NaN or  Infinity or  -Infinity or  '' or  " " or  undefined or  null or  NaN or  Infinity or  -Infinity or  '' or  " " or  undefined or  null or  NaN
+

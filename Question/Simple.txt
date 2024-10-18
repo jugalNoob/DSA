@@ -1,0 +1,290 @@
+1. Primitive Data Types
+Number
+String
+Boolean
+Undefined
+Null
+Symbol
+BigInt
+
+
+2. Non-Primitive (Reference) Data Types
+
+
+Object
+Array
+Function
+Set
+Map
+WeakSet
+WeakMap
+Other Specialized Data Structures
+Typed Arrays
+Buffers (in Node.js)
+
+:::::::::::::::::::::::::::::
+
+What is a data structure?
+
+Arrays
+
+Objects (hash tables)
+
+Stacks
+
+Queues
+
+Linked lists
+
+Singly linked lists
+
+Doubly linked lists
+
+Trees
+
+Binary trees
+
+Heaps
+
+Graphs
+
+Undirected and directed graphs
+
+Weighted and unweighted graphs
+
+How to represent graphs
+
+Roundup
+
+
+8 Common Data Structures in JavaScript
+Stack
+Queue
+Linked List
+Set
+Hash Table
+Tree
+Trie
+Graph
+
+
+https://builtin.com/software-engineering-perspectives/javascript-data-structures
+
+
+https://www.freecodecamp.org/news/data-structures-in-javascript-with-examples/
+
+
+
+
+Road Map Of Dsa :::::::::::::::::::::::::::::::::
+
+1::Learn javascript (or a language)
+
+2:: Base data structure
+.. string & Array
+..Linked list
+..stack & Queue
+
+3:: Advanced data structure
+..Trees
+..Heaps
+..Graphs
+
+4::::Base ALGO 
+-->sort
+
+-->searching
+.linear & Binary search
+.DFS and BFS  in Graphy
+
+
+5::Advanced Algo
+
+-->Dynamic
+..OverLapping sub Problems
+..Memoigation
+..Tabulation
+
+-->Greedy
+
+..Concepts
+example
+..BackTracking
+..shortest Path
+..Minium spanning Tree
+
+
+:::::::::: Strings 
+
+..
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+::::::::::::::::::::::::::::::::::::::::::::
+1::sum of natural number
+2::sum of digits of a number 
+3::count the number of digits of a number  
+4::Palindrome Number
+5::Fibonacci number  
+6::missing Number 
+7::Vaild Anagram  
+8::Merge string alternately 
+9::length of last word
+10::first firstOccurrence in string is called sort 
+11::bubble sort 
+12::selection sort 
+13::insertion sort
+14::merge sort 
+15::qucick sort 
+16::map in JavaScript 
+17::weakMap  
+18::Link list 
+19::reverse Linked list
+
+
+
+:::::::::::front end DSA Topices
+
+ 1::Arrays and Strings:
+
+2::Linked Lists:
+
+3::Stacks and Queues:
+
+4::Hash Tables and Maps:
+
+5::Trees and Graphs:
+
+6::Sorting and Searching Algorithms:
+
+7::Dynamic Programming:
+
+8::Graph Algorithms:
+
+9::Bit Manipulation:
+
+
+::::::::::::::: ALGO   
+
+......Searching Algorithms:
+Linear Search: Iterates through a list to find a target value.
+Binary Search: Searches a sorted array by repeatedly dividing the search interval in half.
+
+
+
+.....Sorting Algorithms:
+::Bubble sort 
+::Merge sort
+::Quick Sort
+::selection Sort
+::insert sort
+
+
+......Dynamic Programming:
+Fibonacci Sequence:::: Solves the Fibonacci sequence efficiently using dynamic 
+programming to avoid redundant calculations.
+
+Knapsack Problem::: Finds the most valuable combination of items that fit into
+a knapsack of limited capacity.
+
+
+.....String Algorithms:
+String Matching Algorithms (e.g., Knuth-Morris-Pratt, Boyer-Moore): Finds occurrences 
+of a pattern within a text.
+
+Longest Common Subsequence: Finds the longest subsequence present in
+given two sequences of characters.
+
+
+...Backtracking:
+N-Queens Problem::: Finds all possible configurations of placing N queens
+on an N×N chessboard such that no two queens attack each other.
+
+Sudoku Solver::: Solves Sudoku puzzles by placing digits from 1 to 9 in
+a 9×9 grid while satisfying the constraints.
+
+
+
+1:::::::::: Data  Data structures are essential components in computer science and programming. :::::::::::::::::::::::::::::
+
+...Array: A collection of elements stored at contiguous memory locations, each
+identified by an index. Arrays can be one-dimensional, multi-dimensional, or jagged
+
+....Linked List: A data structure consisting of a sequence of elements where each element points to the next 
+one in the sequence.
+
+...Stack: A Last-In-First-Out (LIFO) data structure where elements are added and removed from the same end, 
+called the top. It follows the principle of "last in, first out."
+
+....Queue: A First-In-First-Out (FIFO) data structure where elements are added at the rear and removed from
+the front. It follows the principle of "first in, first out."
+
+....Tree: A hierarchical data structure consisting of nodes connected by edges. Trees have a root
+node, parent nodes, and child nodes. Types of trees include binary 
+trees, binary search trees, AVL trees, and red-black trees.
+
+
+...Graph: A non-linear data structure consisting of nodes (vertices) and edges that connect these nodes.
+Graphs can be directed or undirected and may have weighted or unweighted edges.
+
+...Hash Table: A data structure that implements an associative array abstract data type,
+where data is stored in key-value pairs. It uses a hash function to compute an index
+into an array where the desired value can be found.
+
+
+....Heap: A special type of tree-based data structure that satisfies the heap 
+property. Heaps are commonly used to implement priority queues.
+
+
+
+...Trie: Also known as a prefix tree, it is a tree data structure used to store a dynamic
+set of strings where each node represents a common prefix of its descendants.
+
+
+
+....Graphs: Data structures representing networks consisting of nodes (vertices) and edges
+(connections). Graphs can be directed or undirected, cyclic or acyclic, and weighted or unweighted.
+
+-----------------------------------/////////////////////////////// 10 weird algorithms ===================================
+
+1:: Wave function collapse  --> this algo use in gaming
+
+2::diffusion --> image generation openAI
+
+3::simulated annealing
+
+4::sleep sort 
+
+5::Shor 's
+
+6::marching cubes
+
+7::byzantine fault  tolerance 
+
+8::boids
+
+9::Convex Hull Algorithms: Algorithms like Graham's scan and Jarvis's march are used to compute the convex hull 
+of a set of points in a plane. Convex hull algorithms have applications in 
+computer graphics, geographic information systems, and pattern recognition.
+
+10::Merge Sort: 
+
+11::A Search Algorithm*: A* is a popular pathfinding algorithm used in artificial intelligence
+and robotics for finding the shortest path between nodes in a graph. It combines the advantages of 
+Dijkstra's algorithm and heuristic search techniques to improve efficiency.
+
+12::Fast Fourier Transform (FFT): The FFT is an algorithm for efficiently computing the discrete 
+
+
+13::Dijkstra's Algorithm: Dijkstra's algorithm is used for finding the shortest paths between nodes in a graph, 
