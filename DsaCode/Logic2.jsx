@@ -1,3 +1,22 @@
+
+::::::::: check loop Time ::::::::::::::
+
+function Loop() {
+   let x = 100;
+
+   for (let i = 0; i < x; i++) {
+       // Simulate some processing here
+       console.log("Loop iteration:", i);
+   }
+
+   return x; // Return after the loop completes
+}
+
+console.time("Loop Time");
+Loop();
+console.timeEnd("Loop Time");
+
+
 // ::: check array  or str or object or number in if else 
 
 // let arr = ["jugal", "kanika", "study"];
