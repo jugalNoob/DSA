@@ -1,4 +1,33 @@
 
+
+//event Loop  ....................
+
+console.log('1')
+
+setTimeout(()=>{
+
+   console.log('2')
+
+},1000)
+
+console.log('3')
+
+
+::::::::::: /// Important run logic 
+
+let x = 0;
+
+setInterval(() => {
+  console.log(x); // Log the current value of x
+  x++; // Increment x
+
+  // Conditional logic
+  if (x > 5) {
+    x = 0; // Reset x to 0 if it exceeds 5
+  }
+}, 2000); // Runs every 2000 milliseconds (2 seconds)
+
+
 ::::::::: check loop Time ::::::::::::::
 
 function Loop() {
