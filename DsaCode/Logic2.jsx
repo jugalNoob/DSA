@@ -1,4 +1,22 @@
 
+/// check loop time take  .............................
+console.time("Loop Time");
+for(let i=0; i<1000; i++){
+   console.log(i)
+}
+console.timeEnd("Loop Time");
+
+
+for(let i=0; i<1000; i++){ ///every single  loop take time 
+   console.time("Loop Time");
+   console.log(i)
+   console.timeEnd("Loop Time");
+}
+
+
+
+
+
 ///////// Important Logic ////////////
 
 let x = 0;
