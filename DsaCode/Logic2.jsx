@@ -1,4 +1,49 @@
 
+// Memoization function .....................:::::::::::::::::::::::::::::::
+
+function sum(one) {
+   let total = 0;
+   for (let i = 1; i <= one; i++) {
+      total += i;
+   }
+   return total;
+}
+
+// Memoization function
+const memoization = (fn) => {
+   const cache = {}; // Cache persists across calls to memoized function
+
+   return function (...args) {
+      const n = args[0];
+
+      if (n in cache) {
+         console.log("Fetching from cache:", n);
+         return cache[n];
+      } else {
+         console.log("Calculating:", n);
+         const result = fn(n);
+         cache[n] = result;
+         return result;
+      }
+   };
+};
+
+const memoizedSum = memoization(sum);
+
+// Testing the memoized function with timing
+console.time("First call");
+console.log(memoizedSum(20000)); // Calculation occurs here
+console.timeEnd("First call");
+
+console.time("Second call (cached)");
+console.log(memoizedSum(20000)); // Result fetched from cache
+console.timeEnd("Second call (cached)");
+
+
+
+
+
+
 /// check loop time take  .............................
 console.time("Loop Time");
 for(let i=0; i<1000; i++){
