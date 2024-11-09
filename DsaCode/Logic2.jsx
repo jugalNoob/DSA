@@ -1,4 +1,33 @@
 
+///////// Important Logic ////////////
+
+let x = 0;
+let intervalId;
+
+function startInterval() {
+  intervalId = setInterval(() => {
+    console.log(x); // Log the current value of x
+    x++; // Increment x
+
+    // Conditional logic and wait 5s
+    if (x > 5) {
+      console.log("take 5s");
+      clearInterval(intervalId); // Stop the interval
+
+      setTimeout(() => {
+        x = 0; // Reset x to 0 after 5 seconds
+        startInterval(); // Restart the interval
+
+        console.log("take 5s to restart interval")
+      }, 5000);
+    }
+  }, 2000); // Runs every 2000 milliseconds (2 seconds)
+}
+
+startInterval(); // Start the interval initially
+
+
+
 
 //event Loop  ....................
 
