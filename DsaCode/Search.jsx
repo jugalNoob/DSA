@@ -129,24 +129,47 @@ console.log(objs)
 
 
 
-
-/// Api search Very Important code ----------------->>
-const apisear = async () => {
-   // Await the fetch call to get the response
-   let data = await fetch("https://jsonplaceholder.typicode.com/users");
-   let apis = await data.json();
- //  console.log(apis); // This will log the actual data
+//////////////////////       ------------------------------------- Api Advance ::::::::::::::::::::
 
 
-   // // Search index in api  --------------------->><><>
-   let sear=3
-   for(let i  in apis){
-      if(i == sear){
-         console.log(apis[i]);
+const apisear = async (sear) => {
+    try {
+        // Fetch data from the API
+        let response = await fetch("https://jsonplaceholder.typicode.com/users");
 
-         break;
-      }
-   }
+        // Check if the response is OK (status 200–299)
+        if (!response.ok) throw new Error("Failed to fetch data");
+
+        console.log(response.url)
+        // Parse the JSON data
+        let mean = await response.json();
+
+        console.log(mean)
+
+        // Search for the user by name
+        let userFound = false;
+        for (let user of mean) {
+            if (user.name === sear) {
+                console.log("User found:", user.name);
+                console.log("User info:", user);
+                userFound = true;
+                break;
+            }
+        }
+
+        // If no user is found, log a message
+        if (!userFound) {
+            console.log("User not found:", sear);
+        }
+    } catch (error) {
+        console.error("Error fetching data:", error.message);
+    }
+};
+
+// Call the async function with a dynamic search term
+apisear("Kurtis Weissnat");
+
+
 
 
    //user id Index use 
@@ -256,21 +279,36 @@ let data = {
  
 Binary Search with Iterative approac  ::::::::::::::::::::
 
-let data = [5, 9, 13, 17,45,67,89,100];
-let find = 89;
-let start = 0;
-let end = data.length - 1;
-let position = undefined;
-while (start <= end) {
-let mid = Math.floor((start + end) / 2);
-// console.warn(data[mid]);
-if (data[mid] === find) {
- position = mid;
- break;
-} else if (data[mid] < find) {
- start = mid + 1;
-} else {
- end = mid - 1;
+let data=[10 , 20 , 30 , 40 , 50 , 60]
+
+let find=30
+
+let start=0
+
+let end=data.length-1
+
+let poist=undefined
+
+while(start <= end){
+
+    let mind=Math.floor((start+end) / 2)
+
+    //console.log(mind) // 2 index 
+
+  //  console.log(data[mind]) //  30 elements 
+
+    if(data[mind] === find){ // data[30] === 30
+        
+        poist=mind
+        break;
+    }else if(data[mind] < find){
+
+        start=mind+1
+    }else{
+
+        end=mind-1
+    }
+  
 }
-}
-console.warn(position)
+
+console.log(poist) // 0 index
