@@ -1,5 +1,5 @@
 :::::::: Min and Max Logic in array  .................
-
+https://log2base2.com/
 1. first 
 
 let data=[1 , 2 , 3 , 4]
