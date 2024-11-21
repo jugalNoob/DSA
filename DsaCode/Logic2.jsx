@@ -1,5 +1,27 @@
 
 
+
+Add and Min :::::::::::::::::>.....:::::::::::::::>>>>>>>>>>>>>>>
+
+        let io = 0;
+
+        function openLinks() {
+            console.log(io);
+            io++;
+        }
+
+        function Min() {
+            console.log(io);
+
+            // Check if io is greater than 0 before decrementing
+            if (io > 0) {
+                io--;
+            } else {
+                alert('io cannot be less than 0');
+            }
+        }
+    
+
 /// check array Goat Array statr row  class :::::::::::::::::::::::::::::::
 
     <input type="text" id="Search" placeholder="Enter a name">
