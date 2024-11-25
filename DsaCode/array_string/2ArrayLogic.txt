@@ -1,3 +1,33 @@
+///////////////////  Check which number divide by three  .,.....................
+
+let num = [10, 20, 30, 40, 6 , 0.5];
+
+let de = [];
+let two = [];
+let three = [];
+
+for (let i = 0; i < num.length; i++) {
+  // Check if the number is divisible by 3
+  if (num[i] % 3 === 0) {
+    de.push(num[i]);
+  } 
+  // Check if the number is divisible by 2 but not by 3
+  else if (num[i] % 2 === 0) {
+    two.push(num[i]);
+  } 
+  // Otherwise, it's neither divisible by 2 nor 3
+  else {
+    three.push(num[i]);
+  }
+}
+
+console.log(de, "check with number divisible by 3");
+console.log(two, "check with number divisible by 2");
+console.log(three, "check with number not divisible by 2 or 3");
+
+
+
+
 ::::::::::  Random array Showing 
 
 let arr = ["jugal" , "skaran" , "anku" , "lion" , "tiger"];
@@ -42,40 +72,43 @@ let arr = ["jugal", "skaran", "anku", "lion", "tiger"];
 
 :::::::::::::::: ......................................
 |||||||||| Remove duplicates array||||||||
-function removeDuplicatesNew(nums) {
-   // Handle the edge case where the array is empty
-   if (nums.length === 0) return 0;
- 
-   // Initialize the pointer for the last unique element
-   let i = 0;
- 
-   // Loop through the array starting from the second element
-   for (let j = 1; j < nums.length; j++) {
-     // If a new unique element is found, update the array
-     if (nums[i] !== nums[j]) {
-       i++;
-       nums[i] = nums[j];
-     }
-   }
- 
-   // The length of the array with unique elements is i + 1
-   const length = i + 1;
- 
-   console.log(length)
+function test(data) {
+    if (data.length === 0) return 0;
 
-   // Return the length and the modified array up to the new length
-   return {
-     length,
-     uniqueArray: nums.slice(0, length), // Only return the unique part of the array
-     fullArray: nums // Return the full modified array
-   };
- }
- 
- // Test the function with an example array
- const result = removeDuplicatesNew([0, 0, 1, 1, 1, 2, 2, 3, 3, 4 , 5 , 5]);
- console.log(`Length of unique elements: ${result.length}`);
- console.log(`Array with unique elements: ${result.uniqueArray}`);
- console.log(`Full array after removing duplicates: ${result.fullArray}`);
+    let i = 0;
+    const duplicates = [];
+
+    for (let j = 0; j < data.length; j++) {
+     
+        if (data[i] !== data[j]) {
+            i++;
+            data[i] = data[j];
+        } else if (i !== j) {
+            duplicates.push(data[j]);
+        }
+    }
+
+    let length = i + 1;
+
+    console.log(length);
+
+    return {
+        length,
+        unique: data.slice(0, length),
+        datas: data,
+        duplicates,
+    };
+}
+
+let data = [0, 1, 1, 2, 2 , 3];
+
+let result = test(data);
+
+console.log(`Length of unique elements: ${result.length}`);
+console.log(`Array with unique elements: ${result.unique}`);
+console.log(`Full array after removing duplicates: ${result.datas}`);
+console.log(`Duplicate elements: ${result.duplicates}`);
+
 
 
 let data = [10, 20, 30, 20, 50, 10];  ///check duplest value 
