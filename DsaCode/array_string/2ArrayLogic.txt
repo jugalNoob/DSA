@@ -19,6 +19,25 @@ let arr = ["jugal", "skaran", "anku", "lion", "tiger"];
 
 
 
+::::::::::: negativeNumbers   or positiveNumbers
+
+// let data = [12, 20, 30, 40, -1, 3, -60, -5];
+
+// let negativeNumbers = [];
+// let positiveNumbers = [];
+
+// // Loop through the array to find negative and positive numbers
+// for (let i = 0; i < data.length; i++) {
+//   if (data[i] < 0) {   ///  -2 -1 , 0 , 1 , 2 , 12 , 30 
+//     negativeNumbers.push(data[i]);
+//   } else if (data[i] > 0) { //-2 -1 , 0 , 1 , 2 , 12 , 30 
+//     positiveNumbers.push(data[i]);
+//   }
+// }
+
+// console.log("Negative Numbers:", negativeNumbers);
+// console.log("Positive Numbers:", positiveNumbers);
+
 
 
 :::::::::::::::: ......................................
