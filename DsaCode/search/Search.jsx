@@ -1,4 +1,38 @@
 
+:::::::::::::::  Check bad word in javascript  ::::::::::::::::::::::::::
+
+
+let data = ['ass', 'sexy', 'gay', 'hot', 'man', 'jugal', 'karan'];
+let allowedWords = ['karan', 'man', 'jugal']; // List of "simple" words allowed for searching
+
+let post = undefined;
+let search = 'man'; // Change this value to test different searches
+let found = false;
+
+// Check if the search word is in the allowed list
+if (allowedWords.includes(search)) {
+    for (let i = 0; i < data.length; i++) {
+        if (data[i] === search) { 
+            post = data[i];
+            found = true;
+            break; // Stop the loop if the word is found
+        }
+    }
+} else {
+    console.log("error: searching for bad words is not allowed");
+}
+
+// Display results only if the word is allowed and found
+if (found) {
+    console.log(post, "search result found");
+} else if (!found && allowedWords.includes(search)) {
+    console.log("error: word not found in the data");
+}
+
+
+::::::::: Greater than ::::::::::::::::::::::::
+
+
 let data = [10, 20, 30, 40, 50, 60, 80];
 let op = 20;
 for (let i = 0; i < data.length; i++) {
