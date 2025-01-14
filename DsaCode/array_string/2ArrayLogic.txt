@@ -26,6 +26,31 @@ console.log(two, "check with number divisible by 2");
 console.log(three, "check with number not divisible by 2 or 3");
 
 
+::::::::::::::: SetInterval Items with array :::::::::::::::::::::::::::::::::::::::::::
+
+// let count = 0;
+
+// let clearall = setInterval(() => {
+//   let array = ["jugal", "karans", "lion", "usa"];
+
+//   console.log(array);
+
+//   if (count === 3) {
+//     array.length = 0; // Deletes all elements in the array
+//     console.log(array, "delete all array");
+//   }
+
+//   count++;
+
+//   console.log(count);
+
+//   if (count == 5) {
+//     console.log("stopping...");
+//     clearInterval(clearall);
+//   }
+// }, 2000);
+
+
 
 
 ::::::::::  Random array Showing 
