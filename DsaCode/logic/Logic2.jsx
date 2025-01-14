@@ -1,4 +1,9 @@
 
+// string convert to array :::::::
+
+const numone = "10";
+let oar = +numone; // Converts string to number using unary +
+console.log(typeof oar); // "number"
 
 
 Add and Min :::::::::::::::::>.....:::::::::::::::>>>>>>>>>>>>>>>
