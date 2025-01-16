@@ -1,8 +1,40 @@
+const arr = [10, 20, 30, 40, 50, 60, ];
+
+console.log(arr.length % 2 !== 0)
+// Step 3: Print half of each element and the center element using a loop
+for(let i=0; i<arr.length; i++){
+    // console.log("Half of Element at index", i, ":", arr[i] / 2);
+    
+    // Calculate and print the center element (floor division)
+    if(arr.length % 2 !== 0) {  // Odd length
+        const centerIndex = Math.floor(arr.length / 2);
+        console.log("Center Element:", arr[centerIndex]);  // Display the center element
+    }
+}
+
+
+// Step 2: Calculate the center index
+// const centerIndex = Math.floor(arr.length / 2);
+
+
+// Step 2: Calculate the center index
+// const centerIndex = Math.floor(arr.length / 2);
+// // Step 3: Access the center element
+// const centerElement = arr[centerIndex];
+// console.log("Array:", arr);
+// console.log("Center Element:", centerElement);
+
+
+
+
+
 // console.log("start")
 // setTimeout(()=>{
 //     console.log("done")
 // },1000)
 // console.log("end ")
+
+
 
 
 
