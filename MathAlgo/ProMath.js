@@ -1,4 +1,12 @@
 1. Basic Probability in JavaScript
+
+
+Simulating a Coin Toss: check with precentage check
+
+let p = Math.pow(2/4 , 1); // flip coin 
+
+console.log(p)
+
 Simulating a Coin Toss:
 
 javascript
