@@ -7,6 +7,27 @@
     <script src="index.js"></script>
 </head>
 <body>
+
+    <h2>Search User</h2>
+    <input type="text" id="searchInput" placeholder="Enter user name">
+    <button onclick="searchUser()">Search</button>
+    <p id="result"></p>
+
+    <h2>Add New User</h2>
+    <input type="text" id="name" placeholder="Name"><br><br>
+    <input type="number" id="total" placeholder="Total Balance"><br><br>
+    <input type="text" id="accountNumber" placeholder="Account Number"><br><br>
+    <input type="email" id="email" placeholder="Email"><br><br>
+    <input type="text" id="phone" placeholder="Phone"><br><br>
+    <input type="text" id="address" placeholder="Address"><br><br>
+    <select id="accountType">
+        <option value="Savings">Savings</option>
+        <option value="Checking">Checking</option>
+    </select><br><br>
+    <button onclick="addUser()">Add User</button>
+
+    <h2>All Users</h2>
+    <ul id="userList"></ul>
     
 </body>
 </html>
