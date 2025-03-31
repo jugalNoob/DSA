@@ -1,5 +1,91 @@
-  /// Total All amount with all user 
+https://www.geeksforgeeks.org/bankers-algorithm-in-operating-system-2/ -->Banking Algo
+https://www.geeksforgeeks.org/disk-scheduling-algorithms/?ref=lbp
 
+
+/// check user online true and false  ------------------------>>
+
+let isActive=navigator.onLine ?true : false
+
+    
+const objArray = [
+    {
+        index: 0,
+        details: {
+            name: "Jugal Sharma",
+            ...(isActive && { status: "userOnline" }), // Only adds `status: "active"` when `isActive` is true
+                      total: 45,
+                      accountNumber: "1234567890",
+                      email: "jugal@example.com",
+                      phone: "9876543210",
+                      address: "123 Main St, City, Country",
+                      accountType: "Savings",
+                      createdAt: new Date().toISOString(),
+            // identity: { hashPanCard: false, hashAdhaarCard: true },
+        }
+    },
+    {
+        index: 1,
+        details: {
+                      name: "Kanika Sharma",
+            total: 44,
+            accountNumber: "0987654321",
+            email: "kanika@example.com",
+            phone: "8765432109",
+            address: "456 Elm St, City, Country",
+            accountType: "Checking",
+            createdAt: new Date().toISOString(),
+
+// identity: { hashPanCard: false, hashAdhaarCard: true },
+        }
+    }
+];
+
+console.log(objArray )
+
+
+
+
+/// Total All amount with all user 
+
+
+
+let isActive=true
+
+    
+const objArray = [
+    {
+        index: 0,
+        details: {
+            name: "Jugal Sharma",
+            ...isActive &&(  {status:"active"}),
+                      total: 45,
+                      accountNumber: "1234567890",
+                      email: "jugal@example.com",
+                      phone: "9876543210",
+                      address: "123 Main St, City, Country",
+                      accountType: "Savings",
+                      createdAt: new Date().toISOString(),
+            // identity: { hashPanCard: false, hashAdhaarCard: true },
+        }
+    },
+    {
+        index: 1,
+        details: {
+                      name: "Kanika Sharma",
+            total: 44,
+            accountNumber: "0987654321",
+            email: "kanika@example.com",
+            phone: "8765432109",
+            address: "456 Elm St, City, Country",
+            accountType: "Checking",
+            createdAt: new Date().toISOString(),
+
+// identity: { hashPanCard: false, hashAdhaarCard: true },
+        }
+    }
+];
+
+console.log(objArray)
 
 
   let totalSum = 0; // Initialize sum variable
