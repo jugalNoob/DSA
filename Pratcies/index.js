@@ -1,47 +1,265 @@
+
+// let data = ["jugal", "sharma"];
+
+// for (let i = 0; i < data.length; i++) {
+//     const word = data[i];
+//     for (let j = 0; j < word.length; j++) {
+//         console.log(`${word[j]}: ${word.charCodeAt(j)}`);
+//     }
+// }
+
+// let charCodes = [];
+
+// for (let i = 0; i < data.length; i++) {
+//     const word = data[i];
+//     for (let j = 0; j < word.length; j++) {
+//         charCodes.push({ char: word[j], code: word.charCodeAt(j) });
+//     }
+// }
+
+// console.log(charCodes);
+
+
+// let result = {};
+
+// for (let i = 0; i < data.length; i++) {
+//     const word = data[i];
+//     for (let j = 0; j < word.length; j++) {
+//         result[word[j]] = word.charCodeAt(j);
+//     }
+// }
+
+// console.log(result);
+
+
+
+// // Leaky Bucket configuration
+// const bucketCapacity = 5; // Maximum capacity of the bucket
+// const leakRate = 1; // Number of requests allowed to be processed per second
+// let currentLevel = 0; // Current number of requests in the bucket
+
+// // Leak the bucket at a fixed interval
+// setInterval(() => {
+//     if (currentLevel > 0) {
+//         currentLevel--; // Process one request (leak one unit)
+//         console.log(`Leaked 1 request. Current level: ${currentLevel}`);
+//     }
+// }, 1000 / leakRate); // Leak rate in milliseconds
+
+
+//     if (currentLevel < bucketCapacity) {
+//         currentLevel++; // Add request to the bucket
+//         console.log(`Request added. Current level: ${currentLevel}`);
+ 
+//     } else {
+//         res.status(429).send("Too Many Requests. Please try again later.");
+//         console.log("Request rejected. Bucket overflow.");
+//     }
+
+
+
+// // 🔊 What is Phonetic Search?
+
+
+// const objArray = [
+//     {
+//         index: 0,
+//         details: {
+//             name: "Jugal Sharma",
+//             total: 45,
+//             accountNumber: "1234567890",
+//             email: "jugal@example.com",
+//             phone: "9876543210",
+//             address: "123 Main St, City, Country",
+//             accountType: "Savings",
+//             createdAt: new Date().toISOString(),
+//         }
+//     },
+//     {
+//         index: 1,
+//         details: {
+//             name: "Kanika Sharma",
+//             total: 69,
+//             accountNumber: "0987654321",
+//             email: "kanika@example.com",
+//             phone: "8765432109",
+//             address: "456 Elm St, City, Country",
+//             accountType: "Checking",
+//             createdAt: new Date().toISOString(),
+//         }
+//     },
+//     {
+//         index: 2,
+//         details: {
+//             name: "Rahul Verma",
+//             total: 32,
+//             accountNumber: "5678901234",
+//             email: "rahul@example.com",
+//             phone: "7654321098",
+//             address: "789 Pine St, City, Country",
+//             accountType: "Savings",
+//             createdAt: new Date().toISOString(),
+//         }
+//     },
+//     {
+//         index: 3,
+//         details: {
+//             name: "Simran Kaur",
+//             total: 85,
+//             accountNumber: "2345678901",
+//             email: "simran@example.com",
+//             phone: "6543210987",
+//             address: "101 Maple St, City, Country",
+//             accountType: "Business",
+//             createdAt: new Date().toISOString(),
+//         }
+//     },
+  
+// ];
+
+
+
+// let accountNumber = "1234567890";
+// let indexNumber=0
+// let newName = "Bad boy";
+
+
+// let userFound = false;
+// for (let i = 0; i < objArray.length; i++) {
+//     if (
+//         objArray[i].index === indexNumber ||  // Check index
+//         objArray[i].details.accountNumber === accountNumber) {
+//         console.log(`Before Update: ${objArray[i].details.name}`);
+//         objArray[i].details.name = newName;
+//         console.log(`After Update: ${objArray[i].details.name}`);
+//         userFound = true;
+//         break; // Exit loop once the user is found and updated
+//     }
+// }
+
+// if (!userFound) {
+//     console.log("User not found!");
+// }
+
+// console.log("After update " , objArray)
+
+// let jsondata = JSON.stringify(objArray); // Correct way to convert data to JSON string
+// localStorage.setItem("userData", jsondata); // Stores JSON string in localStorage
+
+
+// //  Define search criteria
+// let indexNumber = 3; // Index to delete
+// let username = "Simran Kaur";
+// let accountNumber = "6543210987";
+
+// let indexToDelete = -1;
+
+// // Find user by index, name, or account number
+// for (let i = 0; i < objArray.length; i++) {
+//     if (
+//         objArray[i].index === indexNumber ||  // Check index
+//         objArray[i].details.name.toLowerCase() === username.toLowerCase() ||  // Check name (case insensitive)
+//         objArray[i].details.accountNumber === accountNumber  // Check account number
+//     ) {
+//         indexToDelete = i;
+//         break;
+//     }
+// }
+
+// // Delete if found
+// if (indexToDelete !== -1) {
+//     console.log(`Deleting user:`, objArray[indexToDelete]);
+//     objArray.splice(indexToDelete, 1);
+//     console.log("After deletion:", objArray);
+// } else {
+//     console.log(`User not found for Index: ${indexNumber}, Name: "${username}", or Account Number: "${accountNumber}"`);
+// }
+
+
+
+
+// How It Works:
+// Loop through objArray to find the object with the given indexNumber.
+
+// Store its position (indexToDelete).
+
+// Use splice() to remove the object from the array.
+
+// ✅ Now, the object with index: 0 will be removed! 🚀
+
+
+//https://configr.medium.com/top-10-essential-algorithms-every-software-developer-should-know-and-why-they-matter-b6844fa71f5e
+
+// const tf = require('@tensorflow/tfjs');
+
+// let data = ["lion", "cat", "dog", "elephant"];
+// let search = "dog";
+
+// // Convert data to a tensor
+// const tensorData = tf.tensor1d(data);
+
+// // Find the index of "dog"
+// const matchIndex = data.indexOf(search);
+
+// if (matchIndex !== -1) {
+//     console.log(`Found: ${data[matchIndex]} at index ${matchIndex}`);
+// } else {
+//     console.log("Not Found");
+// }
+
+
+// let account = Math.random().toString(16).slice(2,15);
+// console.log(account.toUpperCase());
+
+// let account = Math.random().toString(16).substring(2);
+// console.log(account);
+
+
+
 // location.assign("https://www.w3schools.com");
 
-let origin = window.location.origin;
+// let origin = window.location.origin;
 
-console.log(origin)
+// console.log(origin)
 
 
-let isActive=navigator.onLine ?true : false
+// let isActive=navigator.onLine ?true : false
 
     
-const objArray = [
-    {
-        index: 0,
-        details: {
-            name: "Jugal Sharma",
-            ...(isActive && { status: "userOnline" }), // Only adds `status: "active"` when `isActive` is true
-                      total: 45,
-                      accountNumber: "1234567890",
-                      email: "jugal@example.com",
-                      phone: "9876543210",
-                      address: "123 Main St, City, Country",
-                      accountType: "Savings",
-                      createdAt: new Date().toISOString(),
-            // identity: { hashPanCard: false, hashAdhaarCard: true },
-        }
-    },
-    {
-        index: 1,
-        details: {
-                      name: "Kanika Sharma",
-            total: 44,
-            accountNumber: "0987654321",
-            email: "kanika@example.com",
-            phone: "8765432109",
-            address: "456 Elm St, City, Country",
-            accountType: "Checking",
-            createdAt: new Date().toISOString(),
+// const objArray = [
+//     {
+//         index: 0,
+//         details: {
+//             name: "Jugal Sharma",
+//             ...(isActive && { status: "userOnline" }), // Only adds `status: "active"` when `isActive` is true
+//                       total: 45,
+//                       accountNumber: "1234567890",
+//                       email: "jugal@example.com",
+//                       phone: "9876543210",
+//                       address: "123 Main St, City, Country",
+//                       accountType: "Savings",
+//                       createdAt: new Date().toISOString(),
+//             // identity: { hashPanCard: false, hashAdhaarCard: true },
+//         }
+//     },
+//     {
+//         index: 1,
+//         details: {
+//                       name: "Kanika Sharma",
+//             total: 44,
+//             accountNumber: "0987654321",
+//             email: "kanika@example.com",
+//             phone: "8765432109",
+//             address: "456 Elm St, City, Country",
+//             accountType: "Checking",
+//             createdAt: new Date().toISOString(),
 
-// identity: { hashPanCard: false, hashAdhaarCard: true },
-        }
-    }
-];
+// // identity: { hashPanCard: false, hashAdhaarCard: true },
+//         }
+//     }
+// ];
 
-console.log(objArray )
+// console.log(objArray )
 
 
 //     let search = "Jugal Sharma";

@@ -253,36 +253,145 @@ const objArray = [
             accountType: "Checking",
             createdAt: new Date().toISOString(),
         }
+    },
+    {
+        index: 2,
+        details: {
+            name: "Rahul Verma",
+            total: 32,
+            accountNumber: "5678901234",
+            email: "rahul@example.com",
+            phone: "7654321098",
+            address: "789 Pine St, City, Country",
+            accountType: "Savings",
+            createdAt: new Date().toISOString(),
+        }
+    },
+    {
+        index: 3,
+        details: {
+            name: "Simran Kaur",
+            total: 85,
+            accountNumber: "2345678901",
+            email: "simran@example.com",
+            phone: "6543210987",
+            address: "101 Maple St, City, Country",
+            accountType: "Business",
+            createdAt: new Date().toISOString(),
+        }
     }
 ];
 
-// Function to delete user by index using for...of loop
-function deleteUserByIndex(indexNumber) {
-    let indexToDelete = -1; // Store index of user to delete
+console.log(objArray);
 
-    for (let i = 0; i < objArray.length; i++) {
-        if (objArray[i].index === indexNumber) {
-            indexToDelete = i;
-            break; // Stop loop once found
-        }
-    }
 
-    if (indexToDelete !== -1) {
-        console.log(`Deleting user: ${objArray[indexToDelete].details.name}`);
-        objArray.splice(indexToDelete, 1);
-        console.log("User deleted successfully.");
-    } else {
-        console.log("User not found.");
+const indexNumber = 0; // Index to delete
+let indexToDelete = -1; // Store index to remove
+
+// Loop through the array to find the matching index
+for (let i = 0; i < objArray.length; i++) {
+    if (objArray[i].index === indexNumber) {
+        indexToDelete = i;
+        break; // Stop loop once found
     }
 }
 
-// Example: Delete user with index 0
-deleteUserByIndex(0);
+// Remove the object if found
+if (indexToDelete !== -1) {
+    objArray.splice(indexToDelete, 1);
+}
 
-// Example: Try deleting a non-existent user
-deleteUserByIndex(5);
+console.log("After deletion:", objArray);
 
-console.log(objArray);
+
+
+// user delete with add name and account number ------------------------>>
+
+const objArray = [
+    {
+        index: 0,
+        details: {
+            name: "Jugal Sharma",
+            total: 45,
+            accountNumber: "1234567890",
+            email: "jugal@example.com",
+            phone: "9876543210",
+            address: "123 Main St, City, Country",
+            accountType: "Savings",
+            createdAt: new Date().toISOString(),
+        }
+    },
+    {
+        index: 1,
+        details: {
+            name: "Kanika Sharma",
+            total: 69,
+            accountNumber: "0987654321",
+            email: "kanika@example.com",
+            phone: "8765432109",
+            address: "456 Elm St, City, Country",
+            accountType: "Checking",
+            createdAt: new Date().toISOString(),
+        }
+    },
+    {
+        index: 2,
+        details: {
+            name: "Rahul Verma",
+            total: 32,
+            accountNumber: "5678901234",
+            email: "rahul@example.com",
+            phone: "7654321098",
+            address: "789 Pine St, City, Country",
+            accountType: "Savings",
+            createdAt: new Date().toISOString(),
+        }
+    },
+    {
+        index: 3,
+        details: {
+            name: "Simran Kaur",
+            total: 85,
+            accountNumber: "2345678901",
+            email: "simran@example.com",
+            phone: "6543210987",
+            address: "101 Maple St, City, Country",
+            accountType: "Business",
+            createdAt: new Date().toISOString(),
+        }
+    }
+];
+
+console.log("Before deletion:", objArray);
+
+//  Define search criteria
+let indexNumber = 3; // Index to delete
+let username = "Simran Kaur";
+let accountNumber = "6543210987";
+
+let indexToDelete = -1;
+
+// Find user by index, name, or account number
+for (let i = 0; i < objArray.length; i++) {
+    if (
+        objArray[i].index === indexNumber ||  // Check index
+        objArray[i].details.name.toLowerCase() === username.toLowerCase() ||  // Check name (case insensitive)
+        objArray[i].details.accountNumber === accountNumber  // Check account number
+    ) {
+        indexToDelete = i;
+        break;
+    }
+}
+
+// Delete if found
+if (indexToDelete !== -1) {
+    console.log(`Deleting user:`, objArray[indexToDelete]);
+    objArray.splice(indexToDelete, 1);
+    console.log("After deletion:", objArray);
+} else {
+    console.log(`User not found for Index: ${indexNumber}, Name: "${username}", or Account Number: "${accountNumber}"`);
+}
+
 
 
 
@@ -330,3 +439,170 @@ for (let key of objArray) {
         console.log("Total for index 0:", key.details.total);
     }
 }
+
+
+
+:::::::::::::::::::::::: Random Number genter 
+
+function generateRandomUser(index) {
+    const names = ["Jugal Sharma", "Kanika Sharma", "Rahul Verma", "Simran Kaur", "Amit Gupta", "Priya Singh", "Rohan Mehta", "Ananya Das", "Vikram Rao", "Neha Kapoor"];
+    const accountTypes = ["Savings", "Checking", "Business"];
+    
+    return {
+        index: index,
+        details: {
+            name: names[index % names.length],
+            total: Math.floor(Math.random() * 100), // Random total balance
+            accountNumber: Math.floor(1000000000 + Math.random() * 9000000000).toString(),
+            email: `user${index}@example.com`,
+            phone: Math.floor(6000000000 + Math.random() * 4000000000).toString(),
+            address: `${Math.floor(Math.random() * 999)} Main St, City, Country`,
+            accountType: accountTypes[index % accountTypes.length],
+            createdAt: new Date().toISOString(),
+        }
+    };
+}
+
+for (let i = 0; i < 10; i++) {
+    objArray.push(generateRandomUser(i));
+}
+
+console.log("Generated Users:", objArray);
+
+
+:::::::::::::Important ::::::::::::::::::
+
+const objArray = [
+    {
+        index: 0,
+        details: {
+            name: "Jugal Sharma",
+            total: 45,
+            accountNumber: "1234567890",
+            email: "jugal@example.com",
+            phone: "9876543210",
+            address: "123 Main St, City, Country",
+            accountType: "Savings",
+            createdAt: new Date().toISOString(),
+        }
+    },
+    {
+        index: 1,
+        details: {
+            name: "Kanika Sharma",
+            total: 69,
+            accountNumber: "0987654321",
+            email: "kanika@example.com",
+            phone: "8765432109",
+            address: "456 Elm St, City, Country",
+            accountType: "Checking",
+            createdAt: new Date().toISOString(),
+        }
+    },
+    {
+        index: 2,
+        details: {
+            name: "Rahul Verma",
+            total: 32,
+            accountNumber: "5678901234",
+            email: "rahul@example.com",
+            phone: "7654321098",
+            address: "789 Pine St, City, Country",
+            accountType: "Savings",
+            createdAt: new Date().toISOString(),
+        }
+    },
+    {
+        index: 3,
+        details: {
+            name: "Simran Kaur",
+            total: 85,
+            accountNumber: "2345678901",
+            email: "simran@example.com",
+            phone: "6543210987",
+            address: "101 Maple St, City, Country",
+            accountType: "Business",
+            createdAt: new Date().toISOString(),
+        }
+    },
+    {
+        index: 4,
+        details: {
+            name: "Amit Gupta",
+            total: 55,
+            accountNumber: "3456789012",
+            email: "amit@example.com",
+            phone: "5432109876",
+            address: "202 Oak St, City, Country",
+            accountType: "Savings",
+            createdAt: new Date().toISOString(),
+        }
+    },
+    {
+        index: 5,
+        details: {
+            name: "Priya Singh",
+            total: 71,
+            accountNumber: "4567890123",
+            email: "priya@example.com",
+            phone: "4321098765",
+            address: "303 Cedar St, City, Country",
+            accountType: "Checking",
+            createdAt: new Date().toISOString(),
+        }
+    },
+    {
+        index: 6,
+        details: {
+            name: "Rohan Mehta",
+            total: 29,
+            accountNumber: "5678901234",
+            email: "rohan@example.com",
+            phone: "3210987654",
+            address: "404 Birch St, City, Country",
+            accountType: "Business",
+            createdAt: new Date().toISOString(),
+        }
+    },
+    {
+        index: 7,
+        details: {
+            name: "Ananya Das",
+            total: 63,
+            accountNumber: "6789012345",
+            email: "ananya@example.com",
+            phone: "2109876543",
+            address: "505 Walnut St, City, Country",
+            accountType: "Savings",
+            createdAt: new Date().toISOString(),
+        }
+    },
+    {
+        index: 8,
+        details: {
+            name: "Vikram Rao",
+            total: 47,
+            accountNumber: "7890123456",
+            email: "vikram@example.com",
+            phone: "1098765432",
+            address: "606 Chestnut St, City, Country",
+            accountType: "Checking",
+            createdAt: new Date().toISOString(),
+        }
+    },
+    {
+        index: 9,
+        details: {
+            name: "Neha Kapoor",
+            total: 90,
+            accountNumber: "8901234567",
+            email: "neha@example.com",
+            phone: "9876543210",
+            address: "707 Redwood St, City, Country",
+            accountType: "Business",
+            createdAt: new Date().toISOString(),
+        }
+    }
+];
+
+console.log("Generated Users:", objArray);
