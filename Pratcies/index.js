@@ -1,3 +1,352 @@
+// let data = ["jugal", "karan", "anku", "kanika"];
+
+// let count = 0;
+// let opt = undefined;
+
+// let search = "ank";
+
+// for (let i = 0; i < data.length; i++) {
+//  console.log(data[i][0])
+//  console.log(data[i][1])
+//  console.log(data[i][2])
+
+//     count++;
+//     if (data[i].substring(0, 3) === search) { // check first 3 letters
+//         opt = data[i];
+//         break;
+//     }
+// }
+
+// console.log(count); // how many loops it took
+// console.log(opt);   // matched name
+
+
+
+
+// check array digit with  code 
+
+
+
+// let data = ["jugal", "karan", "anku", "kanika"];
+
+// for (let i = 0; i < data.length; i++) {
+//     let combined = data[i][0] + data[i][1] + data[i][2]; // simple joining
+
+//     console.log(`Combined first 3 letters of "${data[i]}" = ${combined}`);
+// }
+
+
+
+// for (let i = 0; i < data.length; i++) {
+//  console.log(data[i][0])
+//  console.log(data[i][1])
+//  console.log(data[i][2])
+
+
+// -- near linear search 
+
+let data = ["jugal", "karan", "anku", "kanika" , "auka"];
+
+let count = 0;
+let opt = undefined;
+
+let search = "ankj";
+
+for (let i = 0; i < data.length; i++) {
+    count++;
+
+    // manual comparison of first 3 characters
+    if (
+        data[i][0] === search[0] &&
+        data[i][1] === search[1] &&
+        data[i][2] === search[2]
+    ) {
+        opt = data[i];
+        break;
+    }
+}
+
+console.log(count);
+console.log(opt);
+
+
+
+
+// --- Time Zone start row class ------------->>
+
+
+
+// function getIndianHours() {
+//     const indianTime = new Date().toLocaleString("en-US", { timeZone: "Asia/Kolkata" });
+//     const date = new Date(indianTime);
+//     const hours = date.getHours();
+
+//     const formattedTime = date.toLocaleTimeString("en-US", {
+//         hour: '2-digit',
+//         minute: '2-digit',
+//         hour12: true,
+//         timeZone: "Asia/Kolkata"
+//     });
+
+//     let greeting = "";
+//     if (hours < 4 || hours >= 19) greeting = "Good Night";
+//     else if (hours < 9) greeting = "Good Morning";
+//     else if (hours < 16) greeting = "Good Afternoon";
+//     else greeting = "Good Evening";
+
+//     return `${greeting}, it's ${formattedTime} IST`;
+// }
+
+// console.log(getIndianHours());
+
+
+// function getIndianHours() {
+//     const hours = new Intl.DateTimeFormat('en-US', {
+//         timeZone: 'Asia/Kolkata',
+//         hour: 'numeric',
+//         hour12: false
+//     }).format(new Date());
+
+//     if (hours < 4 || hours >= 19) return "Good Night";
+//     if (hours < 9) return "Good Morning";
+//     if (hours < 16) return "Good Afternoon";
+//     return "Good Evening";
+// }
+
+// console.log(getIndianHours());
+
+
+
+
+ // -------------Search linear start row  ----------------->>
+
+
+// import dupl from "./duplicate.js"; // ✅ Add `.js` extension!
+// import sortser from "./sort.js"
+
+// let data = ["jugal", "sharma", "karan", "kanika", "jugal", "karan","anku"];
+
+// let search = "jugal";
+// let poist = undefined;
+
+
+// function LinerSearch(){
+
+
+
+//     // -- sort check  ---------------->>
+// console.log(sortser(data))
+
+// // Linear search start ------------------>>
+// for (let i = 0; i < data.length; i++) {
+//     if (data[i] === search) {
+//         poist = data[i];
+//         break;
+//     }
+// }
+
+// // Error handling
+// if (poist !== undefined) {
+//     console.log("use Found in search :", poist);
+// } else {
+//     console.error("Error:user name  not found! in search");
+// }
+// }
+
+// LinerSearch()
+// // Check for duplicates
+// dupl(data);
+
+
+
+
+
+// // check duplicate
+
+
+// let data = ["jugal", "sharma", "karan", "kanika" , "jugal" , "karan"];
+
+// let isDuplicate = false;
+
+// for (let i = 0; i < data.length; i++) {
+//   for (let j = i + 1; j < data.length; j++) {
+//     if (data[i] === data[j]) {
+//       isDuplicate = true;
+//       console.log("Duplicate found:", data[i]);
+//     }
+//   }
+// }
+
+// if (!isDuplicate) {
+//   console.log("No duplicates found");
+// }
+
+
+
+//linear search 
+
+//duplicate 
+
+// check show many people 
+
+// sort  quick sort 
+
+
+
+
+
+
+
+// let data = "jugal";
+// let sea = "jug"; // partial word
+// let count = 0;
+// let opt = undefined;
+
+// for (let i = 0; i <= data.length - sea.length; i++) {
+//     if (data.slice(i, i + sea.length) === sea) {
+//         opt = sea;
+//         count++;
+//         // Optional: break if only first match is needed
+//         break;
+//     }
+// }
+
+// console.log(count); // ➝ 1 if match found
+// console.log(opt);   // ➝ 'jug'
+
+// let data = "jugal";
+// let sea = "ga";
+// let count = 0;
+// let opt = undefined;
+
+// let bol = true;
+
+// for (let i = 0; i < data.length; i++) {
+//     for (let j = 0; j < sea.length; j++) {
+//         if (data[i] === data[j]) {
+//             opt = sea;
+//         } else {
+//             console.log(undefined);
+//         }
+//     }
+// }
+
+// console.log(opt);
+
+
+
+
+
+
+
+    //     if(sea){
+
+    //         console.log(data)
+    //         bol;
+    //     }else{
+
+    //         console.log("data  not campare " ,bol=false)
+    //     }
+    //     break
+        
+
+    // }
+
+    // }
+
+
+
+
+
+
+// let data = "jugal";
+// let sea = "jug";
+// let count = 0;
+// let opt = undefined;
+
+// for (let i = 0; i <= data.length - sea.length; i++) {
+//     let found = true;
+
+//     for (let j = 0; j < sea.length; j++) {
+
+//         // console.log(data[i+j])
+
+
+//         if (data[i + j] !== sea[j]) {
+
+//             // console.log(data[i + j])
+//             console.log(sea[j])
+
+//             found = false;
+//             break;
+//         }
+//     }
+
+//     if (found) {
+//         opt = sea;
+//         count++;
+//         break; // remove this to count all occurrences
+//     }
+// }
+
+// console.log(count); // ➝ 1
+// console.log(opt);   // ➝ 'ug'
+
+// for (let i = 0; i <= data.length - sea.length; i++) {
+//     let match = true;
+
+//     for (let j = 0; j < sea.length; j++) {
+
+//         // console.log(data[j])
+// console.log(sea[j])
+//         if (data[i + j] !== sea[j]) {
+//             match = false;
+//             break;
+//         }
+//     }
+
+//     if (match) {
+//         count++;
+//         opt = sea;
+//         break; // remove this if you want to count all matches
+//     }
+// }
+
+// console.log(count); // ➝ 1
+// console.log(opt);   // ➝ 'jug'
+
+
+
+
+
+
+// // Create a buffer of 16 bytes
+// let buffer = new ArrayBuffer(16);
+// console.log(buffer.byteLength); // 16
+
+// // Create a view to work with the buffer
+// let view = new Uint8Array(buffer);
+
+// // Set values
+// view[0] = 255;
+// view[1] = 128;
+
+// arr
+
+// console.log(view); // Uint8Array(16) [255, 128, 0, 0, ...]
+
+
+
+// const buffer = new ArrayBuffer(4);
+// const view = new DataView(buffer);
+
+// view.setInt32(0, 123456);
+// console.log(view.getInt32(0)); // 123456
+
+
+
+
+
 
 // let data = ["jugal", "sharma"];
 

@@ -69,3 +69,70 @@ const button=isloggedIn ? "log out" : "log in"
 
 
 console.log(button)
+
+
+::::::::::: String Code Array Code :::::::::::::::::::
+
+
+
+let data = ["jugal", "sharma"];
+
+for (let i = 0; i < data.length; i++) {
+    const word = data[i];
+    for (let j = 0; j < word.length; j++) {
+        console.log(`${word[j]}: ${word.charCodeAt(j)}`);
+    }
+}
+
+let charCodes = [];
+
+for (let i = 0; i < data.length; i++) {
+    const word = data[i];
+    for (let j = 0; j < word.length; j++) {
+        charCodes.push({ char: word[j], code: word.charCodeAt(j) });
+    }
+}
+
+console.log(charCodes);
+
+
+let result = {};
+
+for (let i = 0; i < data.length; i++) {
+    const word = data[i];
+    for (let j = 0; j < word.length; j++) {
+        result[word[j]] = word.charCodeAt(j);
+    }
+}
+
+console.log(result);
+
+
+
+:::::::::: Validation string vaey Important :::::::::::
+
+
+let str = "jugal123";
+
+// Loop through each character and validate
+let isValid = true;
+
+for (let char of str) {
+    let code = char.charCodeAt(0);
+
+    // Check: is it NOT a letter (A-Z or a-z) AND NOT a number (0-9)?
+    if (
+        !(code >= 65 && code <= 90) &&  // A-Z
+        !(code >= 97 && code <= 122) && // a-z
+        !(code >= 48 && code <= 57)     // 0-9
+    ) {
+        isValid = false;
+        break;
+    }
+}
+
+if (isValid) {
+    console.log("✅ name format is correct");
+} else {
+    console.log("❌ only letters and numbers allowed");
+}
