@@ -1,3 +1,20 @@
+:::::: Removie Number In String elemnt :::::::::::::::
+
+let data = ["jugal", "karan", "anku", "kanika", 42543, 100, "hello", 200];
+
+// Loop through the array from the start
+for (let i = 0; i < data.length; i++) {
+  if (typeof data[i] === "number") {
+    data.splice(i, 1);  // Remove the number at index i
+    i--;  // Adjust index after removal since elements shift left
+  }
+}
+
+console.log(data);  // ["jugal", "karan", "anku", "kanika", "hello"]
+
+
+
+
 ::::::: Digit Array lement ::::::::::::::::::
 
 

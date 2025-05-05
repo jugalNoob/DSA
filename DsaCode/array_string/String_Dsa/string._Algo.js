@@ -118,3 +118,97 @@ console.log(data2.join("")); // Output as a string: "jugal sharmakaran"
 
 // console.log(data2); // Output: "jugal sharmakaran"
 // console.log(data3); // Output: "jugal sharmakaran"
+
+
+
+
+
+//count the Number of vowels in a string 
+
+function countVowels(str){
+    const vowels="aeiouAEIOU"
+    let count=0
+    for(let char of str){
+        if(vowels.includes(char)){
+            count++
+        }
+    }
+    return count
+}
+
+console.log(countVowels("hello world"))
+
+
+// find the longest word in a string 
+
+function Findlongestword(str){
+
+    let words=str.split(' ')
+    let longest=0
+    for(let word of words){
+        if(word.length > longest ){
+            longest=word.length
+
+        }
+    }
+    return longest
+}
+
+console.log(Findlongestword("the qucik brown fox jumps overy the lazy dog"))
+
+
+
+/// Capitalize the first letter of each word
+
+function Capitalizeword(str){
+    return str.split(' ').map(word=>word.charAt(0).toUpperCase()+word.slice(1)).join('')
+}
+
+
+console.log(Capitalizeword("jugal sharma"))
+
+
+
+// -- > Repeat a string a given Number of Time 
+
+
+function repeatString(str  , num){
+    if(num <0)return '';
+    return str.repeat(num)
+}
+console.log(repeatString("abc" , 3))
+
+
+
+// --- > Remove Duplicate Characters from a string 
+
+function removeDuplicates(str){
+    return [...new Set(str)].join('');
+}
+
+console.log(removeDuplicates("aabbbcc"))
+
+
+
+// --- > > String Revers -----------:>?>>>
+
+function reversString(str){
+
+    return str.split('').reverse().join('')
+}
+
+console.log(reversString("jugal sharma"))
+
+
+
+/// ----- >>> string is a palindrome 
+
+function isPalindrome(str){
+
+    const reversed=str.split('').reverse().join('')
+
+    return str === reversed
+}
+
+console.log(isPalindrome("level"))
+console.log(isPalindrome("hello"))

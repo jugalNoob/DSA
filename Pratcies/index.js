@@ -1,3 +1,129 @@
+// let str = "jugalj";
+// let obj = {};  // Use object instead of array
+// let maxChar = "";
+// let maxCount = 0;
+
+// for (let i = 0; i < str.length; i++) {
+//     let char = str[i];
+    
+//     if (obj[char]) {
+//         obj[char]++;
+//     } else {
+//         obj[char] = 1;
+//     }
+
+//     if (obj[char] > maxCount) {
+//         maxCount = obj[char];
+//         maxChar = char;
+//     }
+// }
+
+// console.log("Frequencies:", obj);
+// console.log("Most frequent character:", maxChar, "=>", maxCount, "times");
+
+
+// let data = ["jugal", "karan", "anku", "kanika", 42543, 100, "hello", 200];
+
+// console.log(typeof(data) === "number" ?  "add more element " : "new array alemnt")
+// console.log(data.slice(0, 4))
+
+
+
+
+
+// let data = ["jugal", "karan", "anku", "kanika", 42543, 100, "hello", 200];
+
+// // Loop through the array from the start
+// for (let i = 0; i < data.length; i++) {
+//   if (typeof data[i] === "number") {
+//     data.splice(i, 1);  // Remove the number at index i
+//     i--;  // Adjust index after removal since elements shift left
+//   }
+// }
+
+// console.log(data);  // ["jugal", "karan", "anku", "kanika", "hello"]
+
+
+// let person = {
+//     address: {
+//       street: {
+//         name: "MG Road"
+//       }
+//     }
+//   };
+  
+//   let name = person?.address?.street?.name;  // Using optional chaining to safely access nested properties
+//   let names = person?.name ?? 'unknown';     // Using nullish coalescing to provide a default value if `person.name` is null or undefined
+//   console.log(name); // Output: MG Road
+//   console.log(names); // Output: unknown (because person.name is undefined)
+//   console.log(person); // Output: { address: { street: { name: "MG Road" } } }
+  
+//   console.log(globalThis===window)
+
+
+// let str='hello'
+// console.log(str.at(0))
+// console.log(str.at(-1))
+
+
+// let person = {
+//     name: 'John',
+//     address: null,
+//   };
+  
+//   // Optional Chaining (?.) and Nullish Coalescing (??)
+//   let street = person?.address?.street ?? 'No street available';
+//   console.log(street); // Output: 'No street available'
+  
+
+
+
+// function outer() {
+//     let count = 0;
+//     return function inner() {
+//       return ++count;
+//     };
+//   }
+  
+//   const counter1 = outer();
+//   console.log(counter1()); // 1
+//   console.log(counter1()); // 2
+  
+//   const counter2 = outer();
+//   console.log(counter2()); // 1 (independent from counter1)
+  
+  
+
+
+// let isLoggedIn = true;
+
+// if (isLoggedIn) {
+//   console.log("Welcome!");
+// } else {
+//   console.log("Please log in.");
+// }
+
+
+
+// Random ------ ::::::::::::::::::::::::::::
+
+// let data = 456;
+
+// let timeSeed = Date.now(); // Current timestamp in milliseconds
+// console.log(timeSeed)
+// let pseudoRandom = timeSeed % data;
+
+// console.log(pseudoRandom);
+
+
+
+// let data = 456;
+
+// let t = performance.now();  // e.g., 123456.789 ms
+// let pseudoRandom = Math.floor((t * 1000) % data);
+
+// console.log(pseudoRandom);
+
 // let data = ["jugal", "karan", "anku", "kanika"];
 
 // let count = 0;
@@ -45,29 +171,29 @@
 
 // -- near linear search 
 
-let data = ["jugal", "karan", "anku", "kanika" , "auka"];
+// let data = ["jugal", "karan", "anku", "kanika" , "auka"];
 
-let count = 0;
-let opt = undefined;
+// let count = 0;
+// let opt = undefined;
 
-let search = "ankj";
+// let search = "ankj";
 
-for (let i = 0; i < data.length; i++) {
-    count++;
+// for (let i = 0; i < data.length; i++) {
+//     count++;
 
-    // manual comparison of first 3 characters
-    if (
-        data[i][0] === search[0] &&
-        data[i][1] === search[1] &&
-        data[i][2] === search[2]
-    ) {
-        opt = data[i];
-        break;
-    }
-}
+//     // manual comparison of first 3 characters
+//     if (
+//         data[i][0] === search[0] &&
+//         data[i][1] === search[1] &&
+//         data[i][2] === search[2]
+//     ) {
+//         opt = data[i];
+//         break;
+//     }
+// }
 
-console.log(count);
-console.log(opt);
+// console.log(count);
+// console.log(opt);
 
 
 
