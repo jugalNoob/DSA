@@ -25,7 +25,18 @@ console.log(de, "check with number divisible by 3");
 console.log(two, "check with number divisible by 2");
 console.log(three, "check with number not divisible by 2 or 3");
 
-// check middle of areray number ------------------->>
+// check middle  first and last elemnt of areray number ------------------->>
+
+let data = [10, 20, 30, 40, 50];
+
+// Access the first element
+let firstElement = data[0];
+
+// Access the last element
+let lastElement = data[data.length - 1];
+
+console.log("First element:", firstElement);  // Output: 10
+console.log("Last element:", lastElement);    // Output: 50
 
 let data = [10, 20, 30, 40, 50];
 
