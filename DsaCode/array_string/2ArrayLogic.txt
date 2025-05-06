@@ -211,6 +211,25 @@ console.log(removeDuplicatesNew([0, 0, 1, 1, 1, 2, 2, 3, 3, 4]));
 
 
 
+function dupl(data) {
+    let isDuplicate = false;
+  
+    for (let i = 0; i < data.length; i++) {
+      for (let j = i + 1; j < data.length; j++) {
+        if (data[i] === data[j]) { 
+          isDuplicate = true;
+          console.log("Duplicate found:", data[i]);
+        }
+      }
+    }
+  
+    if (!isDuplicate) {
+      console.log("No duplicates found");
+    }
+  }
+
+  console.log(dupl([10 , 20 , 30 ,30, 40 , 40]))
+
 
 
 
