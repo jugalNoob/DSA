@@ -1,3 +1,211 @@
+let data = [45, 45, 63, 12];
+let newValue = 22;
+
+// Manual push
+let index = 0;
+while (data[index] !== undefined) {
+  index++;
+}
+data[index] = newValue;
+
+// Print without duplicates
+for (let i = 0; i < data.length; i++) {
+  let isDuplicate = false;
+
+  // Check if data[i] already appeared earlier
+  for (let j = 0; j < i; j++) {
+    if (data[i] === data[j]) {
+      isDuplicate = true;
+      break;
+    }
+  }
+
+  if (!isDuplicate) {
+    console.log(data[i]);
+  }
+}
+
+
+
+// let data = [45, 45, 63, 12];
+// let newValue = 22;
+
+// // Manually push new value without using push()
+// let index = 0;
+// while (data[index] !== undefined) {
+//   index++;
+// }
+// data[index] = newValue;
+
+// // Print only unique values using a loop
+// for (let i = 0; i < data.length; i++) {
+//   let isDuplicate = false;
+  
+//   // Check if data[i] appeared earlier
+//   for (let j = 0; j < i; j++) {
+//     if (data[i] === data[j]) {
+//       isDuplicate = true;
+//       break;
+//     }
+//   }
+
+//   if (!isDuplicate) {
+//     console.log(data[i]);
+//   }
+// }
+
+
+
+
+
+// let data = [10, 50, 60, 50, 60, 40];
+
+// for (let i = 0; i < data.length; i++) {
+//     for (let j = i + 1; j < data.length; j++) {
+//         if (data[i] === data[j]) {
+//             console.log(`Duplicate pair: (${data[i]}, ${data[j]}) at indices (${i}, ${j})`);
+//         }
+//     }
+// }
+
+// let data = [10, 50, 60, 50, 60, 40];
+
+// for (let i = 0; i < data.length; i++) {
+//     for (let j = i + 1; j < data.length; j++) {
+//         if (data[i] === data[j]) {
+//             console.log(`Duplicate pair: (${data[i]}, ${data[j]}) at indices (${i}, ${j})`);
+//         }
+//     }
+// }
+
+
+
+
+// let rate = 5;
+// let incrementing = false; // Track whether we are incrementing or decrementing
+
+// const interval = setInterval(() => {
+//     console.log(rate);
+
+//     if (!incrementing) {
+//         rate--;
+//         if (rate === 0) {  // Change the condition to stop at 0
+//             incrementing = true; // Switch to increment mode
+//         }
+//     } else {
+//         rate++;
+//         if (rate === 5) {  // Change the condition to stop at 5
+//             incrementing = false; // Switch back to decrement mode
+//         }
+//     }
+
+// }, 2000);
+
+
+
+// let rate = 5;
+// let step = -1; // -1 for decrementing, +1 for incrementing
+
+// const interval = setInterval(() => {
+//     console.log(rate);
+//     rate += step; // Increment or decrement based on the step value
+
+//     // Reverse the direction at boundaries
+//     if (rate === 0 || rate === 5) {
+//         step *= -1; // Flip the direction
+//     }
+
+// }, 2000);
+
+
+
+
+
+
+//  center Point of elemnt array ------------->>>>>
+
+// let data = [10, 20, 30, 440, 50];
+// let centerIndex = Math.floor(data.length / 2);
+// console.log(centerIndex); // 2
+// console.log(data[centerIndex]); // 30
+
+
+
+
+//  ///  ------ >>> Last element word of array  ------------->>
+
+// let data = [10, 20, 30, 440, 50];
+// let lastElement = data[data.length - 1];
+// console.log("Last element:", lastElement); // 50
+
+
+// let data = [10, 20, 30, 440, 50];
+// let lastElement;
+
+// for (let item of data) {
+//     lastElement = item;
+// }
+
+// console.log("Last element:", lastElement); // 50
+
+
+// /// ----- >>> first word of elmenet array -----------?>>
+
+// let data = [10, 20, 30, 440, 50];
+// let firstElement = data[0];
+// console.log("First element:", firstElement); // 10
+
+
+// let data = [10, 20, 30, 440, 50];
+// let firstElement;
+
+// for (let i = 0; i < data.length; i++) {
+//     firstElement = data[i];
+//     break; // Exit the loop after the first iteration
+// }
+
+// console.log("First element:", firstElement); // 10
+
+
+
+// function dupl(data) {
+//     let isDuplicate = false;
+  
+//     for (let i = 0; i < data.length; i++) {
+//       for (let j = i + 1; j < data.length; j++) {
+//         if (data[i] === data[j]) { 
+//           isDuplicate = true;
+//           console.log("Duplicate found:", data[i]);
+//         }
+//       }
+//     }
+  
+//     if (!isDuplicate) {
+//       console.log("No duplicates found");
+//     }
+//   }
+
+//   console.log(dupl([10 , 20 , 30 ,30, 40 , 40]))
+
+
+// function findMissing(data) {
+//     let min = Math.min(...data);
+//     let max = Math.max(...data);
+
+//     const missing = [];
+//     for (let i = min; i <= max; i++) {
+//         if (!data.includes(i)) {
+//             missing.push(i);
+//         }
+//     }
+
+//     return missing;
+// }
+
+// // Example usage
+// console.log(findMissing([0, 1, 3, 4, 5, 5, 5, 6 , 8])); // Output: [2]
+
+
 // let str = "jugalj";
 // let obj = {};  // Use object instead of array
 // let maxChar = "";

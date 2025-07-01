@@ -1,3 +1,102 @@
+
+1:::Sum of natural number:::::::::::::::::::::::::::::
+function sumofnatural(num){
+    // let sum=0;
+    // for(let i=0; i<=num; i++){
+    //     sum=sum+i
+    // }
+    // return sum
+console.log(sumofnatural(5)) will output 15 (sum of natural numbers up to 5: 1 + 2 + 3 + 4 + 5 = 15).
+    return  num*(num+1)/2
+}
+console.log(sumofnatural(5))
+console.log(sumofnatural(10))
+console.log(sumofnatural(8))
+
+
+
+::::::::::::::sum of digits of a number ||||||||  //////////////////////////////////////////////////////////////////
+function sumofDigits(num){
+let sum=0;
+while(num > 0){
+    sum+=num%10;
+    num= Math.floor(num/10);
+}
+return sum
+}
+console.log(sumofDigits(1287))
+
+
+
+:::::::::count the number of digits of a number  //////////////////////////////////////////////////////////////////
+function ones(sum){
+   let count= sum.toString().length;
+   let num=3
+   if(count == num){
+    console.log(true)
+   console.log(count)
+   }else{
+    console.log(false)
+   }
+}
+ones(123)
+
+function Ones(sum){
+   let count = sum.toString().length;
+   console.log(count)
+   return count;
+}
+
+let sum = "jugal sharma";
+console.log(Ones(sum));
+
+
+
+::::::::::FindMissingNumber:::::::::::
+
+function findMissingNumber(num) {
+    let sum = 0;
+    for (let i = 0; i < num.length; i++) {
+        sum += num[i];
+    }
+    return num.length * (num.length + 1) / 2 - sum;
+}
+console.log(findMissingNumber([0,1,2,4])); // Output will be 3 (as 3 is the missing number in the array)
+
+
+
+:::::: Longest Common Prefix::::::::::::::::::::::::::::
+function longestCommonPrefix(word1, word2) {
+    let prefix = "";
+    const minLength = Math.min(word1.length, word2.length);
+
+    for (let i = 0; i < minLength; i++) {
+        if (word1[i] === word2[i]) {
+            prefix += word1[i]; // Add character to prefix if they match
+        } else {
+            break; // Break the loop if characters don't match
+        }
+    }
+    return prefix;
+}
+// Example usage:
+console.log(longestCommonPrefix('hello', 'world')); // Output will be an empty string as there's no common prefix
+console.log(longestCommonPrefix('cat', 'cattle')); // Output will be "cat" as "cat" is the common prefix
+
+
+
+:::::::::::::::::::
+
+|||||||||first ocd=curance in  string ::::::::::
+function firstOccurrence(str, subStr) {
+    return str.indexOf(subStr);
+}
+// Example usage:
+console.log(firstOccurrence("Hello, this is a sample text", "is")); // Output will be 10
+console.log(firstOccurrence("JavaScript is fun", "Java")); // Output will be -1 (as "Java" is not present in "JavaScript is fun")
+
+
+
 ///////////////////  Check which number divide by three  .,.....................
 
 let num = [10, 20, 30, 40, 6 , 0.5];
@@ -26,170 +125,54 @@ console.log(two, "check with number divisible by 2");
 console.log(three, "check with number not divisible by 2 or 3");
 
 
-::::::::::::::: SetInterval Items with array :::::::::::::::::::::::::::::::::::::::::::
 
-// let count = 0;
 
-// let clearall = setInterval(() => {
-//   let array = ["jugal", "karans", "lion", "usa"];
 
-//   console.log(array);
+ center Point of elemnt array ------------->>>>>
 
-//   if (count === 3) {
-//     array.length = 0; // Deletes all elements in the array
-//     console.log(array, "delete all array");
-//   }
-
-//   count++;
-
-//   console.log(count);
-
-//   if (count == 5) {
-//     console.log("stopping...");
-//     clearInterval(clearall);
-//   }
-// }, 2000);
+let data = [10, 20, 30, 440, 50];
+let centerIndex = Math.floor(data.length / 2);
+console.log(centerIndex); // 2
+console.log(data[centerIndex]); // 30
 
 
 
 
-::::::::::  Random array Showing 
+ ///  ------ >>> Last element word of array  ------------->>
 
-let arr = ["jugal" , "skaran" , "anku" , "lion" , "tiger"];
-let random=Math.floor(Math.random()*arr.length)
-let array=arr[random]
-console.log(array)
-
-let arr = ["jugal", "skaran", "anku", "lion", "tiger"];
-      let arr1 = ["usa", "indian", "japan", "south africa", 'brazil'];
-      let arr2 = [10, 20, 30, 60, 50, 40, 60];
-      let arr3 = [10.0, 20.7, 58.5, 69.780];
-
-      // Create an array containing references to the four arrays
-      let arrayOfArrays = [arr, arr1, arr2, arr3];
-
-      // Pick a random array from arrayOfArrays
-      const randomArrayIndex = Math.floor(Math.random() * arrayOfArrays.length);
-      const randomArray = arrayOfArrays[randomArrayIndex];
+let data = [10, 20, 30, 440, 50];
+let lastElement = data[data.length - 1];
+console.log("Last element:", lastElement); // 50
 
 
+let data = [10, 20, 30, 440, 50];
+let lastElement;
 
-::::::::::: negativeNumbers   or positiveNumbers
-
-// let data = [12, 20, 30, 40, -1, 3, -60, -5];
-
-// let negativeNumbers = [];
-// let positiveNumbers = [];
-
-// // Loop through the array to find negative and positive numbers
-// for (let i = 0; i < data.length; i++) {
-//   if (data[i] < 0) {   ///  -2 -1 , 0 , 1 , 2 , 12 , 30 
-//     negativeNumbers.push(data[i]);
-//   } else if (data[i] > 0) { //-2 -1 , 0 , 1 , 2 , 12 , 30 
-//     positiveNumbers.push(data[i]);
-//   }
-// }
-
-// console.log("Negative Numbers:", negativeNumbers);
-// console.log("Positive Numbers:", positiveNumbers);
-
-
-
-:::::::::::::::: ......................................
-|||||||||| Remove duplicates array||||||||
-function test(data) {
-    if (data.length === 0) return 0;
-
-    let i = 0;
-    const duplicates = [];
-
-    for (let j = 0; j < data.length; j++) {
-     
-        if (data[i] !== data[j]) {
-            i++;
-            data[i] = data[j];
-        } else if (i !== j) {
-            duplicates.push(data[j]);
-        }
-    }
-
-    let length = i + 1;
-
-    console.log(length);
-
-    return {
-        length,
-        unique: data.slice(0, length),
-        datas: data,
-        duplicates,
-    };
+for (let item of data) {
+    lastElement = item;
 }
 
-let data = [0, 1, 1, 2, 2 , 3];
-
-let result = test(data);
-
-console.log(`Length of unique elements: ${result.length}`);
-console.log(`Array with unique elements: ${result.unique}`);
-console.log(`Full array after removing duplicates: ${result.datas}`);
-console.log(`Duplicate elements: ${result.duplicates}`);
+console.log("Last element:", lastElement); // 50
 
 
- function dupl(data) {
-    let isDuplicate = false;
-  
-    for (let i = 0; i < data.length; i++) {
-      for (let j = i + 1; j < data.length; j++) {
-        if (data[i] === data[j]) { 
-          isDuplicate = true;
-          console.log("Duplicate found:", data[i]);
-        }
-      }
-    }
-  
-    if (!isDuplicate) {
-      console.log("No duplicates found");
-    }
-  }
-  
+/// ----- >>> first word of elmenet array -----------?>>
 
-  console.log(dupl([10 , 20 , 20 , 30 , 40 , 40]))
+let data = [10, 20, 30, 440, 50];
+let firstElement = data[0];
+console.log("First element:", firstElement); // 10
 
 
+let data = [10, 20, 30, 440, 50];
+let firstElement;
 
-function removeDuplicates(nums) { ///RemoveDuplication Simple 
-  for (let i = 0; i < nums.length - 1; i++) {
-    // O(n)
-    if (nums[i] === nums[i + 1]) {
-      nums.splice(i + 1, 1); // O(1)
-      i--;
-    }
-  }
-
-  return nums.length;
+for (let i = 0; i < data.length; i++) {
+    firstElement = data[i];
+    break; // Exit the loop after the first iteration
 }
 
-// Time Complexity - O(n)
-// Space Complexity - O(1)
-// console.log(removeDuplicates([1, 1, 2]));
+console.log("First element:", firstElement); // 10
 
 
-function removeDuplicatesNew(nums) {  /// second remove deUplication 
-  if (nums.length === 0) return 0;
-  let i = 0;
-
-  for (let j = 1; j < nums.length; j++) {
-    if (nums[i] !== nums[j]) {
-      i++;
-      nums[i] = nums[j];
-    }
-  }
-
-  return i + 1;
-}
-// Time Complexity - O(n)
-// Space Complexity - O(1)
-console.log(removeDuplicatesNew([0, 0, 1, 1, 1, 2, 2, 3, 3, 4]));
 
 
 
@@ -238,6 +221,8 @@ const pairs = [[1, 'one'], [2, 'two'], [3, 'three']];
 for (const [number, name] of pairs) {
   console.log(`${name} is ${number}`);
 }
+
+
 
 
 ::::::::::::::::

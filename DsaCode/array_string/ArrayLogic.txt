@@ -1,4 +1,55 @@
 
+
+// center Point of elemnt array ------------->>>>>
+
+let data = [10, 20, 30, 440, 50];
+let centerIndex = Math.floor(data.length / 2);
+console.log(centerIndex); // 2
+console.log(data[centerIndex]); // 30
+
+
+
+
+ ///  ------ >>> Last element word of array  ------------->>
+
+let data = [10, 20, 30, 440, 50];
+let lastElement = data[data.length - 1];
+console.log("Last element:", lastElement); // 50
+
+
+let data = [10, 20, 30, 440, 50];
+let lastElement;
+
+for (let item of data) {
+    lastElement = item;
+}
+
+console.log("Last element:", lastElement); // 50
+
+
+/// ----- >>> first word of elmenet array -----------?>>
+
+let data = [10, 20, 30, 440, 50];
+let firstElement = data[0];
+console.log("First element:", firstElement); // 10
+
+
+let data = [10, 20, 30, 440, 50];
+let firstElement;
+
+for (let i = 0; i < data.length; i++) {
+    firstElement = data[i];
+    break; // Exit the loop after the first iteration
+}
+
+console.log("First element:", firstElement); // 10
+
+
+
+
+
+
+
 /////// check negative and positive value in array 
 let data = [12, 20, 30, 40, -1, 3, -60, -5];
 
