@@ -1,29 +1,279 @@
-let data = [45, 45, 63, 12];
-let newValue = 22;
 
-// Manual push
-let index = 0;
-while (data[index] !== undefined) {
-  index++;
-}
-data[index] = newValue;
+let data=[10 , 20 , 40 , 10]
 
-// Print without duplicates
-for (let i = 0; i < data.length; i++) {
-  let isDuplicate = false;
+let count =0
 
-  // Check if data[i] already appeared earlier
-  for (let j = 0; j < i; j++) {
-    if (data[i] === data[j]) {
-      isDuplicate = true;
-      break;
+let min=data[2]
+
+for(let i=0; i<data.length; i++){
+
+    count ++
+    if(data[i] < min){
+        min=data[i]
+
+        break
+     
     }
-  }
-
-  if (!isDuplicate) {
-    console.log(data[i]);
-  }
 }
+
+console.log(count)
+console.log(min)
+
+
+// const data = [9, 8, 7, 6];
+
+// let start = 0;
+// let end = data.length - 1; // end = 3
+
+// let count =0
+// while (start < end) { // 0 < 3 1 < 2 loop out  2 <1
+
+
+
+ 
+//     let temp=data[start] //  temp=data[9]
+
+//     console.log(temp , 'temp')
+
+
+//     data[start]=data[end]//data[0]=data[6]
+
+//     data[end]=temp // data[6]=temp[0]
+//     start++
+//     end --
+// }
+
+
+// 🔁 1st Iteration:
+
+// temp = data[0]        // temp = 9
+// data[0] = data[3]     // data[start=0]9 =data[6] 6
+// data[3] = temp        // data[3] = 9
+
+// start++   → 1
+// end--     → 2
+
+// [6, 8, 7, 9]
+
+
+// 🔁 2nd Iteration:
+
+// temp = data[1]        // temp = 8
+// data[1] = data[2]     // data[1] = 7
+// data[2] = temp        // data[2] = 8
+
+// start++   → 2
+// end--     → 1 (loop ends)
+
+// [6, 7, 8, 9]
+
+
+// 🔁 Loop: while (start < end)
+
+
+// | Iteration | `start` | `end` | Condition (`start < end`) | Action        |
+// | --------- | ------- | ----- | ------------------------- | ------------- |
+// | 1         | 0       | 3     | ✅ `0 < 3`                 | Run iteration |
+// | 2         | 1       | 2     | ✅ `1 < 2`                 | Run iteration |
+// | 3         | 2       | 1     | ❌ `2 < 1`                 | ❌ Exit loop   |
+
+
+
+// console.log(data)
+
+// Index of each element:
+
+// data[0] = 9
+
+// data[1] = 8
+
+// data[2] = 7
+
+// data[3] = 6
+
+
+
+// | i | Condition `i >= post` | data\[i+1] = data\[i]   | Condition `i == post` | data\[i] = add | data after step   |
+// | - | --------------------- | ----------------------- | --------------------- | -------------- | ----------------- |
+// | 3 | true                  | data\[4] = data\[3] → 6 | false                 | —              | \[9, 8, 7, 6, 6]  |
+// | 2 | true                  | data\[3] = data\[2] → 7 | false                 | —              | \[9, 8, 7, 7, 6]  |
+// | 1 | true                  | data\[2] = data\[1] → 8 | false                 | —              | \[9, 8, 8, 7, 6]  |
+// | 0 | true                  | data\[1] = data\[0] → 9 | true                  | data\[0] = 69  | \[69, 9, 8, 7, 6] |
+
+
+
+
+// // Visual diagrams to understand it deeper
+// let count=0
+// let data1=[1 , 2  , 2 , 3]
+// let data2=[7 , 8 , 9 , 10]
+// let data3=[]
+// for(let i=0; i<data1.length; i++){
+
+//     count ++
+//   //  console.log(data3 ,'data3') --> perfect way to understand how work
+//     // --->> 
+//     data3[i]=data1[i]   // data3[0]=data[0]
+//     // data[1]=data[1]
+//     //data[2]=data[2]
+//     //data[3]=data[2]
+// }
+// // console.log(count , 'count')
+// // console.log(data3)
+
+// for(let i=0; i<data2.length; i++){
+
+//     // console.log(data3 , 'data3')
+
+
+//     // data3[data1.length]=data2[i]
+
+
+// // data1.length = 4 (since data1 = [1, 2, 2, 3])
+
+// // So data3[4 + i] = data2[i] → we are appending to the end of data3.
+
+//     data3[data1.length+i]=data2[i]
+
+//     // data3[i]=data2[i]
+// }
+// console.log(data3)
+
+// // 🧠 Why data1.length + i?
+// // You already filled the first 4 indexes (0 to 3) of data3 with data1.
+// // So, to start adding data2 after the last index of data3, you must start from index
+
+
+// 🔁 Let's Walk Through the Loop:
+
+// | i | data2\[i] | data1.length + i | Assignment      | data3 after step           |
+// | - | --------- | ---------------- | --------------- | -------------------------- |
+// | 0 | 7         | 4                | `data3[4] = 7`  | \[1, 2, 2, 3, 7]           |
+// | 1 | 8         | 5                | `data3[5] = 8`  | \[1, 2, 2, 3, 7, 8]        |
+// | 2 | 9         | 6                | `data3[6] = 9`  | \[1, 2, 2, 3, 7, 8, 9]     |
+// | 3 | 10        | 7                | `data3[7] = 10` | \[1, 2, 2, 3, 7, 8, 9, 10] |
+
+
+// data[2] = data[3];
+
+// | Index | 0  | 1  | 2  | 3  |
+// | ----- | -- | -- | -- | -- |
+// | Value | 10 | 20 | 40 | 40 |
+
+
+// let data=[10 , 20 , 30 , 40]
+
+// let del=0
+
+// let count =0
+
+// for(let i=del; i<data.length-1; i++){
+
+//     console.log(data[i]) // 30 
+
+//     count ++
+//     data[i]=data[i+1] // data[30]=data[40]
+//     //data[30]=data[40]
+
+//     console.log(data[i]) // 40
+// }
+
+// console.log(count , 'count')
+// //  So what did your loop do?
+// // Replaced index 2 (which had 30) with the value at index 3 (40)
+
+// // No other replacements happened
+
+// // The original 30 is now gone
+
+// // The last 40 is still there until you remove it using .length--
+
+
+// //console.log(data) //--> (4) [10, 20, 40, undefined] // undefined (out of bounds)
+// console.log(data.length);      // 4
+// data.length = data.length - 1; // 4 → 3
+// console.log(data.length - 1);  // 3 - 1 = 2
+// console.log(data.length) // 3 
+// console.log(data);             // [10, 20, 40]
+
+
+
+
+// | Condition              | Action                  | Why                         |
+// | ---------------------- | ----------------------- | --------------------------- |
+// | `data[mid] === search` | Found → return or break | Exact match                 |
+// | `data[mid] < search`   | `start = mid + 1`       | Target is in **right half** |
+// | `data[mid] > search`   | `end = mid - 1`         | Target is in **left half**  |
+
+
+
+
+
+
+
+
+
+// let search='anku'
+
+// let comparisons = 0;
+
+// let user=undefined
+
+// for(let i=0; i<data.length; i++){
+
+//     comparisons++;
+
+//   if(data[i] === search){  // // Example: data[0] === 'jugal' → true
+
+//    // user=data[i]  // if data found then add jugal=data[jugal]
+
+//    user=i  //  0 =0
+
+//      break; // stop loop once found
+//   }
+// }
+// console.log("Comparisons:", comparisons);
+// console.log(user)
+
+
+// let i=10
+
+// let b=i
+
+// console.log(b)
+
+
+
+// 🧠 What is Linear Search?
+// Linear search is a simple search algorithm that:
+
+// Starts at the first element (index 0).
+
+// Checks each item one by one.
+
+// Stops when it finds a match (or continues till the end if not found).
+
+
+
+
+// 📈 Visual Example:
+// For an array like:
+
+// js
+// Copy
+// Edit
+// let data = ['a', 'b', 'c', 'd', 'e'];
+// let search = 'e';
+// Number of comparisons:
+
+// Best case: 1 (if search = 'a')
+
+// Worst case: 5 (if search = 'e' or not found)
+
+
+//----->>Time Complexity 
+
+
 
 
 
